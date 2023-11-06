@@ -1,2 +1,3 @@
-# Beach-Finder
-An applcation to find best beach in Mexico
+# Las Vegas Trip Organizer
+
+An application to find best trip to Las Vegas
