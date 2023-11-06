@@ -6,7 +6,7 @@
 
 body {
     min-height: 100vh;
-    background: url(/assets/welcome-to-las-vegas-wallpaper.jpg) no-repeat;
+    background: url(./assets/welcome-to-las-vegas-wallpaper.jpg) no-repeat;
     background-size:auto;
     background-position: center;
 }
@@ -42,13 +42,6 @@ body {
     border-right: 30px solid gold;
     color: gold;
 }
-
-.verticalLine {
-    border: border-box;
-    border-left: 5px solid gold;
-    position: absolute;
-    height: 100%;
- }
 
 h2 {
     font-size: 2rem;
