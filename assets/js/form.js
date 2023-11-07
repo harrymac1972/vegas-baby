@@ -1,5 +1,5 @@
 
-function init(){
+function init() {
     var nameLbl = $("<h4>");
     nameLbl.attr("id","name-lbl");
     nameLbl.attr("class","lbl");
@@ -21,6 +21,35 @@ function init(){
     var emailInp = $('<input type="text">');
     emailInp.attr("id","email-inp");
     $("#form-con").append(emailInp);
+}
+
+function initInterestQuestObj() {
+    interestsObjArr = [{
+        lbl:"Water Sports?",
+        type:"check",
+        default:"off"
+    },{
+        lbl:"Gambling?",
+        type:"check",
+        default:"off"
+    },{
+        lbl:"Dancing?",
+        type:"check",
+        default:"off"
+    },{
+        lbl:"Concerts / Shows?",
+        type:"check",
+        default:"off"
+    },{
+        lbl:"Shopping?",
+        type:"check",
+        default:"off"
+    },{
+        lbl:"Out of Town Excursions?",
+        type:"check",
+        default:"off"
+    } 
+    ]
 }
 
 init();
