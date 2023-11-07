@@ -4,6 +4,10 @@ input {
     margin: 0.25rem;
 }
 
+.lbl {
+    margin-left: 1rem;
+}
+
 #form-con {
     display: flex;
     justify-content: center;
