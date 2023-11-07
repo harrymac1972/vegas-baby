@@ -28,8 +28,8 @@ body {
     border-radius: 20px;
     backdrop-filter: blur(55px);
     padding: 2rem 3rem;
-   margin: 0 50px 0 50px;
-   margin-top: 200px;
+    margin: 0 50px 0 50px;
+    margin-top: 200px;
 }
 .main1{
     border: 5px solid grey;
