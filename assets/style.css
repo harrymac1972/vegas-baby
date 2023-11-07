@@ -3,20 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.background {
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    width: 100%;
+}
 .header {
     background-color: green;
     display: flex;
     justify-content: center;
-    font-family:'Monoton', sans-serif;
-    font-size: 25px;
+    font-family:'monoton', sans-serif;
+    font-size: 48px;
     color: goldenrod
 }
 
-body{
-    background: url(/img/welcome-to-las-vegas-wallpaper.jpg) no-repeat;
-    background-position: center;
-}
 
 h1 {
     display: flex;
@@ -30,7 +31,6 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
-    margin-top: 600px;
 
 }
 
