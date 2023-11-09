@@ -45,7 +45,7 @@ function getInterestsObjArr() {
         type:"check",
         default:"off"
     },{
-        lbl:"Divcerts / Shows?",
+        lbl:"Concerts / Shows?",
         type:"check",
         default:"off"
     },{
@@ -69,16 +69,22 @@ function getInterestsObjArr() {
 
 function renderQuestions() {
     var interestsArr = getInterestsObjArr();
-    for (var i=0; i<interestsArr.length;i++) {        
+    for (var i=0; i<interestsArr.length;i++) {
         var lbl = $("<h4>");
         var id = "quest-" + i;
         lbl.attr("id",id);
         lbl.attr("class","quest-lbl");
         lbl.text(interestsArr[i]["lbl"]);
+          
+        var chk = $("<input type='checkbox'>");
+        var id = "input-" + i;
+        chk.attr("id",id);
+        chk.attr("class","quest-input");
 
         var questDiv = $('<div>');
         questDiv.attr("class","quest-set");
         questDiv.append(lbl);
+        questDiv.append(chk);
         $("#form-div").append(questDiv);
     }
 }
