@@ -9,12 +9,12 @@ function init() {
     var nameInp = $('<input type="text">');
     nameInp.attr("id","name-inp");
 
-    var nameCon = $('<div>');
-    nameCon.attr("id","name-con");
-    nameCon.attr("class","input-set");
-    nameCon.append(nameLbl);
-    nameCon.append(nameInp);
-    $("#form-con").append(nameCon);
+    var nameDiv = $('<div>');
+    nameDiv.attr("id","name-div");
+    nameDiv.attr("class","input-set");
+    nameDiv.append(nameLbl);
+    nameDiv.append(nameInp);
+    $("#form-div").append(nameDiv);
 
     var emailLbl = $("<h4>");
     emailLbl.attr("id","email-lbl");
@@ -25,12 +25,12 @@ function init() {
     var emailInp = $('<input type="text">');
     emailInp.attr("id","email-inp");
 
-    var emailCon = $('<div>');
-    emailCon.attr("id","email-con");
-    emailCon.attr("class","input-set");
-    emailCon.append(emailLbl);
-    emailCon.append(emailInp);
-    $("#form-con").append(emailCon);
+    var emailDiv = $('<div>');
+    emailDiv.attr("id","email-div");
+    emailDiv.attr("class","input-set");
+    emailDiv.append(emailLbl);
+    emailDiv.append(emailInp);
+    $("#form-div").append(emailDiv);
 
     renderQuestions();
 }
@@ -45,7 +45,7 @@ function getInterestsObjArr() {
         type:"check",
         default:"off"
     },{
-        lbl:"Concerts / Shows?",
+        lbl:"Divcerts / Shows?",
         type:"check",
         default:"off"
     },{
@@ -69,15 +69,17 @@ function getInterestsObjArr() {
 
 function renderQuestions() {
     var interestsArr = getInterestsObjArr();
-    for (var i=0; i<interestsArr.length;i++) {
-        console.log(interestsArr[i]);
-        
+    for (var i=0; i<interestsArr.length;i++) {        
         var lbl = $("<h4>");
-        var id_v = "quest-" + i;
-        lbl.attr("id",id_v);
+        var id = "quest-" + i;
+        lbl.attr("id",id);
         lbl.attr("class","quest-lbl");
         lbl.text(interestsArr[i]["lbl"]);
-        $("#form-con").append(lbl);
+
+        var questDiv = $('<div>');
+        questDiv.attr("class","quest-set");
+        questDiv.append(lbl);
+        $("#form-div").append(questDiv);
     }
 }
 
