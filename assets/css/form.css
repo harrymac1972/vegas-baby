@@ -16,6 +16,7 @@ input {
 .quest-set {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
 }
 
 #form-div {
