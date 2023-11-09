@@ -83,8 +83,8 @@ function renderQuestions() {
 
         var questDiv = $('<div>');
         questDiv.attr("class","quest-set");
-        questDiv.append(lbl);
         questDiv.append(chk);
+        questDiv.append(lbl);
         $("#form-div").append(questDiv);
     }
 }
