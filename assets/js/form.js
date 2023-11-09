@@ -5,22 +5,32 @@ function init() {
     nameLbl.attr("class","lbl");
     nameLbl.attr("for","name-inp");
     nameLbl.text("Full Name:");
-    $("#form-con").append(nameLbl);
 
     var nameInp = $('<input type="text">');
     nameInp.attr("id","name-inp");
-    $("#form-con").append(nameInp);
+
+    var nameCon = $('<div>');
+    nameCon.attr("id","name-con");
+    nameCon.attr("class","input-set");
+    nameCon.append(nameLbl);
+    nameCon.append(nameInp);
+    $("#form-con").append(nameCon);
 
     var emailLbl = $("<h4>");
     emailLbl.attr("id","email-lbl");
     emailLbl.attr("class","lbl");
     emailLbl.attr("for","email-inp");
     emailLbl.text("email:");
-    $("#form-con").append(emailLbl);
 
     var emailInp = $('<input type="text">');
     emailInp.attr("id","email-inp");
-    $("#form-con").append(emailInp);
+
+    var emailCon = $('<div>');
+    emailCon.attr("id","email-con");
+    emailCon.attr("class","input-set");
+    emailCon.append(emailLbl);
+    emailCon.append(emailInp);
+    $("#form-con").append(emailCon);
 
     renderQuestions();
 }

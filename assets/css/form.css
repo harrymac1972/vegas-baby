@@ -8,6 +8,16 @@ input {
     margin-left: 1rem;
 }
 
+.input-set {
+    display: flex;
+    flex-direction: row;
+}
+
+.quest-set {
+    display: flex;
+    flex-direction: row;
+}
+
 #form-con {
     display: flex;
     flex-direction: column;
