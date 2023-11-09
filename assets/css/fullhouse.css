@@ -1,0 +1,171 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: grey;
+    align-items: center;
+    padding-top: 50px;
+    background-image: url("https://mediaim.expedia.com/localexpert/184393/26db2a67-d459-42eb-8c74-82d730211c7b.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .card-back {
+    margin-top: 100px;
+    background: #8d72c2;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "bottom";
+    font-family: 'roboto';
+    border-radius: 18px;
+    box-shadow: -1rem 0 3rem #000;
+    text-align: center;
+    overflow: hidden;
+    transition: all 1s ease;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .thefront {
+    margin-top: 100px;
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    border-radius: 18px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    transform: rotateY(0deg);
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .thefront {
+    transform: rotateY(180deg);
+  }
+  
+  .card:hover .card-back {
+    transform: rotateY(0deg);
+  }
+  
+  .btn {
+    background: #54c3dd;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #5b51e1;
+    text-decoration: none;
+  }
+  
+  .card-img {
+    grid-area: "image";
+    background: linear-gradient(#fff0 0%, #fff0, 70%, #dfd6d6 100%),
+      url("https://livingcities.org/wp-content/uploads/2021/04/AustinTX.jpg");
+    background-size: cover;
+    border-radius: 0 0 60% 60% / 0 0 20% 20%;
+  }
+  
+  .card-description {
+    grid-area: text;
+    font-family: 'roboto';
+    margin-top: -10px;
+  }
+  
+  .card-description > p {
+    margin: 15px;
+    margin-top: -10px;
+  }
+  
+  #visit {
+    font-family: 'arial';
+    text-transform: uppercase;
+  }
+  
+  #booknowbtn {
+    background: #54c3dd;
+    background: linear-gradient(#f2eecb, #cfb997);
+    grid-area: bottom;
+    border: none;
+    font-size: 20px;
+    color: white;
+    margin-top: 30px;
+    text-decoration: none;
+  }
+  
+  #booknowbtn:hover {
+    cursor: pointer;
+    background: #51a7e1;
+  }
+  
+  .card:hover {
+    transform: translateY(-1rem);
+  }
+  
+  .card:hover ~ .card {
+    transform: translateX(130px);
+  }
+  
+  .card:not(:first-child) {
+    margin-left: -130px;
+  }
+  
+  /* Images location*/
+  
+  #ten {
+    background-image: url("assets/imgs/10-S.png");
+  }
+  
+  #jack {
+    background-image: url("assets/imgs/J-S.png");
+  }
+  
+  #queen {
+    background-image: url("assets/imgs/Q-S.png");
+  }
+  
+  #king {
+    background-image: url("assets/imgs/K-S.png");
+  }
+  
+  #ace {
+    background-image: url("assets/imgs/A-S.png");
+  }
+  
+  #sb {
+    background-position: bottom;
+    background-image: url("https://raw.githubusercontent.com/kriskosta/siteimages/main/smallsbpic.jpg");
+  }
+  
+  #hustler {
+    background-image: url("https://funvideoworld.com/wp-content/uploads/2020/03/Strip-Clubs-In-Dallas.jpg");
+  }
+  
+  #capo {
+    background-image: url("https://media.cntraveler.com/photos/5a8453e5833f8a477b949503/16:9/w_2560,c_limit/Capo's_Tony-Gemignani_2018_Capo's-exterior-time-period.jpg");
+  }
+  
+  #helitour {
+    background-image: url("https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/f0/69/28.jpg");
+  }
+  
+  #hotel {
+    background-image: url("https://images.getaroom-cdn.com/image/upload/s--gCsvwa3C--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1688588192/cd699a9f3ee9ff2a372b7ade85e653b04f0c3000?atc=e7cd1cfa");
+  }
+  
+  #wynn {
+    background-image: url("https://i.pinimg.com/564x/4a/bd/3d/4abd3d00f943aa7b888e122f543d39e4.jpg");
+  }
