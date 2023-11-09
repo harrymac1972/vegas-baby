@@ -39,7 +39,6 @@ body {
     border-radius: 18px;
     backface-visibility: hidden;
     overflow: hidden;
-    background-image: url("assets/spade.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -127,23 +126,23 @@ body {
   /* Images location*/
   
   #ten {
-    background-image: url("assets/10-S.png");
+    background-image: url("assets/imgs/10-S.png");
   }
   
   #jack {
-    background-image: url("assets/J-S.png");
+    background-image: url("assets/imgs/J-S.png");
   }
   
   #queen {
-    background-image: url("assets/Q-S.png");
+    background-image: url("assets/imgs/Q-S.png");
   }
   
   #king {
-    background-image: url("assets/K-S.png");
+    background-image: url("assets/imgs/K-S.png");
   }
   
   #ace {
-    background-image: url("assets/A-S.png");
+    background-image: url("assets/imgs/A-S.png");
   }
   
   #sb {
