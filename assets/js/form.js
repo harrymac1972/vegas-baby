@@ -25,15 +25,11 @@ function init() {
 
 function initInterestQuestObj() {
     interestsObjArr = [{
-        lbl:"Water Sports?",
-        type:"check",
-        default:"off"
-    },{
         lbl:"Gambling?",
         type:"check",
         default:"off"
     },{
-        lbl:"Dancing?",
+        lbl:"Nightclubs?",
         type:"check",
         default:"off"
     },{
@@ -48,7 +44,15 @@ function initInterestQuestObj() {
         lbl:"Out of Town Excursions?",
         type:"check",
         default:"off"
-    } 
+    },{
+        lbl:"Motor Sports?",
+        type:"check",
+        default:"off"
+    },{
+        lbl:"Water Sports?",
+        type:"check",
+        default:"off"
+    }
     ]
 }
 
