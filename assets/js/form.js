@@ -5,22 +5,32 @@ function init() {
     nameLbl.attr("class","lbl");
     nameLbl.attr("for","name-inp");
     nameLbl.text("Full Name:");
-    $("#form-con").append(nameLbl);
 
     var nameInp = $('<input type="text">');
     nameInp.attr("id","name-inp");
-    $("#form-con").append(nameInp);
+
+    var nameDiv = $('<div>');
+    nameDiv.attr("id","name-div");
+    nameDiv.attr("class","input-set");
+    nameDiv.append(nameLbl);
+    nameDiv.append(nameInp);
+    $("#form-div").append(nameDiv);
 
     var emailLbl = $("<h4>");
     emailLbl.attr("id","email-lbl");
     emailLbl.attr("class","lbl");
     emailLbl.attr("for","email-inp");
     emailLbl.text("email:");
-    $("#form-con").append(emailLbl);
 
     var emailInp = $('<input type="text">');
     emailInp.attr("id","email-inp");
-    $("#form-con").append(emailInp);
+
+    var emailDiv = $('<div>');
+    emailDiv.attr("id","email-div");
+    emailDiv.attr("class","input-set");
+    emailDiv.append(emailLbl);
+    emailDiv.append(emailInp);
+    $("#form-div").append(emailDiv);
 
     renderQuestions();
 }
@@ -60,14 +70,22 @@ function getInterestsObjArr() {
 function renderQuestions() {
     var interestsArr = getInterestsObjArr();
     for (var i=0; i<interestsArr.length;i++) {
-        console.log(interestsArr[i]);
-        
         var lbl = $("<h4>");
-        var id_v = "quest-" + i;
-        lbl.attr("id",id_v);
+        var id = "quest-" + i;
+        lbl.attr("id",id);
         lbl.attr("class","quest-lbl");
         lbl.text(interestsArr[i]["lbl"]);
-        $("#form-con").append(lbl);
+          
+        var chk = $("<input type='checkbox'>");
+        var id = "input-" + i;
+        chk.attr("id",id);
+        chk.attr("class","quest-input");
+
+        var questDiv = $('<div>');
+        questDiv.attr("class","quest-set");
+        questDiv.append(lbl);
+        questDiv.append(chk);
+        $("#form-div").append(questDiv);
     }
 }
 
