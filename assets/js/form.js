@@ -35,8 +35,6 @@ function _init() {
     var interestsArr = renderQuestions();
 
     buttonsRender(interestsArr);
-
-
 }
 
 function buttonsRender(interestsArr) {
@@ -108,6 +106,10 @@ function getInterestsObjArr() {
         default:"off"
     },{
         lbl:"Out of Town Excursions?",
+        type:"check",
+        default:"off"
+    },{
+        lbl:"Sporting Events?",
         type:"check",
         default:"off"
     },{
