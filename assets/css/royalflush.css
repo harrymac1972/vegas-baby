@@ -11,6 +11,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .card {
+    
+    width: 300px;
+    height: 500px;
+    border-radius: 18px;
   }
   
   .card-back {
@@ -29,6 +37,7 @@ body {
     transform: rotateY(180deg);
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    font-family: 'Segoe UI', sans-serif;
   }
   
   .thefront {
@@ -39,19 +48,25 @@ body {
     border-radius: 18px;
     backface-visibility: hidden;
     overflow: hidden;
+    background-image: url("assets/spade.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    border-style: solid ;
+    border-width: 1px;
     transform: rotateY(0deg);
     transition: all 1s ease;
     transform-style: preserve-3d;
   }
   
+  
+  
   .card:hover .thefront {
     transform: rotateY(180deg);
-  }
+    box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(126, 17, 39);
+   }
+  
   
   .card:hover .card-back {
     transform: rotateY(0deg);
@@ -69,6 +84,7 @@ body {
   .btn:hover {
     background: #5b51e1;
     text-decoration: none;
+    
   }
   
   .card-img {
@@ -77,17 +93,41 @@ body {
       url("https://livingcities.org/wp-content/uploads/2021/04/AustinTX.jpg");
     background-size: cover;
     border-radius: 0 0 60% 60% / 0 0 20% 20%;
+    box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(173, 49, 74);
   }
+  
+  
   
   .card-description {
     grid-area: text;
     font-family: 'roboto';
     margin-top: -10px;
+   
   }
   
   .card-description > p {
     margin: 15px;
     margin-top: -10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: rgb(45, 0, 128);
+    font-size: 20px;
+    padding: 2px;
+    font-family: 'Segoe UI';
+  
+  }
+  
+  a {
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none; 
+    color: rgb(54, 8, 97);
+  }
+  
+  a:hover {
+    text-decoration: none; 
+    color: rgb(87, 14, 14)
   }
   
   #visit {
@@ -104,6 +144,7 @@ body {
     color: white;
     margin-top: 30px;
     text-decoration: none;
+    box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(173, 49, 74);
   }
   
   #booknowbtn:hover {
@@ -113,6 +154,7 @@ body {
   
   .card:hover {
     transform: translateY(-1rem);
+    
   }
   
   .card:hover ~ .card {
@@ -126,23 +168,23 @@ body {
   /* Images location*/
   
   #ten {
-    background-image: url("assets/imgs/10-S.png");
+    background-image: url("/assets/imgs/10-S.png")
   }
   
   #jack {
-    background-image: url("assets/imgs/J-S.png");
+    background-image: url("/assets/imgs/J-S.png");
   }
   
   #queen {
-    background-image: url("assets/imgs/Q-S.png");
+    background-image: url("/assets/imgs/Q-S.png");
   }
   
   #king {
-    background-image: url("assets/imgs/K-S.png");
+    background-image: url("/assets/imgs/K-S.png"); 
   }
   
   #ace {
-    background-image: url("assets/imgs/A-S.png");
+    background-image: url("/assets/imgs/A-S.png");
   }
   
   #sb {
