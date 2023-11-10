@@ -127,8 +127,10 @@ function resetForm(interestsArr) {
 }
 
 function submitForm(interestsArr) {
-    console.log($("#name-inp").val());
-    console.log($("#email-inp").val());
+    storageObj = {};
+    storageObj["fullName"] = $("#name-inp").val();
+    storageObj["email"] = $("#email-inp").val();
+    storageObj["questionsObj"] = {};
     for (var i=0; i<interestsArr.length; i++) {
         var id = "#input-" + i;
         console.log(id);
@@ -138,7 +140,9 @@ function submitForm(interestsArr) {
             var bool = 0;
         }
         console.log(bool);
+        storageObj["questionsObj"][interestsArr[i]["lbl"]] = bool;
     }
+    console.log(storageObj);
 }
 
 init();
