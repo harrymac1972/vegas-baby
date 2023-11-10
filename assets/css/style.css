@@ -7,50 +7,61 @@
     display: flex;
     justify-content: center;
     align-items:center ;
-    width: 100%;
 }
 .header {
-    background-color: green;
+    background-color: darkslategray;
     display: flex;
     justify-content: center;
-    font-family:'monoton', sans-serif;
+    font-family:'Monoton', sans-serif;
     font-size: 48px;
-    color: goldenrod
+    color: aliceblue;
+    text-shadow: 0 0 10px gold,
+                 0 0 20px gold,
+                 0 0 40px gold,
+                 0 0 80px gold,
+                 0 0 100px gold,
+                 0 0 150px gold;
 }
 
 
 h1 {
     display: flex;
     justify-content: center;
-    font-family:'Monoton', sans-serif;
-    color: goldenrod
+    font-family:'Lato', sans-serif;
+
 }
 
 
 .wrapper {
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
+    justify-content: space-around;
+    align-items: flex-start;
 
 }
 
 .main1, .main2 {
     position: relative;
-    max-width: 500px;
     background-color: transparent;
     border-radius: 20px;
     backdrop-filter: blur(55px);
     padding: 2rem 3rem;
 }
+
 .main1{
-    border: 5px solid purple;
-    color: darkblue;
+
+    border: 5px solid green;
+}
+.main2{
+    border: 5px solid goldenrod;
 }
 
-.main2{
-    border: 5px solid gold;
-    color: gold;
+
+.btn, .redirectionBTN {
+    border: solid 1px ;
+    width: 100%;
+    border-radius: 20px;
 }
+
 
 #carouselExampleRide {
     border: 10px solid rgb(240, 154, 7);
@@ -58,7 +69,7 @@ h1 {
 }
 
 .carousel-item {
-    height: 240px;
+    height: 480px;
 }
 
 .carousel-img {
@@ -66,62 +77,30 @@ h1 {
     object-fit: fill;
 }
 
-h2 {
-    font-size: 2rem;
-    text-align: center;
+footer {
+    margin-top: 10px;
+    background-color: darkslategray;
+    color: goldenrod;
+}
+.footer {
+    border: border-box;
+    display: block;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
- .input-box input {
-    width: 100%;
-    background-color: transparent;
-    border: 1px solid;
-    border-radius: 10px;
-    outline: none;
-    font-size: rem;
- }
-
- .main1 .input-box input {
-    color: purple;
- }
-
- .main2 .input-box input {
-    color: gold ;
- }
- .submitBasic {
-    width: 100%;
-    height: 40px;
-    background-color: purple;
-    border:2px solid purple;
-    border-radius: 10px;
-    color: white;
- }
-
- .submitPremium {
-    width: 100%;
-    height: 40px;
-    background-color: gold;
-    border:2px solid gold;
-    border-radius: 10px;
-    color: white;
- }
-
- .submitBasic:hover {
-    background-color: green;
-    border-radius: 30px;
-    font-size: 20px;
-    color: white;
- }
-
-.submitPremium:hover{
-    background-color: darkblue;
-    border-radius: 30px;
-    font-size: 20px;
-    color: white;
- }
-
- footer {
+.footerWrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     border: border-box;
-    height: 25px;
+
  }
+
+ .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+ }
+
