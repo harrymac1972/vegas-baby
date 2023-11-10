@@ -76,14 +76,14 @@ function renderButtons(interestsArr) {
     resetBtn.attr("id","reset-btn");
     resetBtn.text("Reset");
     resetBtn.on("click",function() {
-        resetQuestions(interestsArr);
+        resetForm(interestsArr);
     })
     
     var submitBtn = $("<button>");
     submitBtn.attr("id","submit-btn");
     submitBtn.text("Submit");
     submitBtn.on("click",function() {
-        submitQuestions(interestsArr);
+        submitForm(interestsArr);
     })
 
     var btnDiv = $('<div>');
@@ -117,15 +117,21 @@ function renderQuestions() {
     return interestsArr;
 }
 
-function resetQuestions(interestsArr) {
-
+function resetForm(interestsArr) {
+    $("#name-inp").val("");
+    $("#email-inp").val("");
+    for (var i=0; i<interestsArr.length; i++) {
+        var id = "#input-" + i;
+        $(id).prop('checked', false);
+    }
 }
 
-function submitQuestions(interestsArr) {
+function submitForm(interestsArr) {
+    console.log($("#name-inp").val());
+    console.log($("#email-inp").val());
     for (var i=0; i<interestsArr.length; i++) {
         var id = "#input-" + i;
         console.log(id);
-        // console.log($(id).val());
         if ($(id).is(":checked")) {
             var bool = 1;
         } else {
@@ -137,4 +143,3 @@ function submitQuestions(interestsArr) {
 
 init();
 
-// $('#chk').val();
