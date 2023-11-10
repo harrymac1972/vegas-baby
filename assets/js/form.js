@@ -32,7 +32,11 @@ function init() {
     emailDiv.append(emailInp);
     $("#form-div").append(emailDiv);
 
-    renderQuestions();
+    var interestsArr = renderQuestions();
+
+    renderButtons(interestsArr);
+
+
 }
 
 function getInterestsObjArr() {
@@ -67,6 +71,29 @@ function getInterestsObjArr() {
     }]
 }
 
+function renderButtons(interestsArr) {
+    var resetBtn = $("<button>");
+    resetBtn.attr("id","reset-btn");
+    resetBtn.text("Reset");
+    resetBtn.on("click",function() {
+        resetQuestions(interestsArr);
+    })
+    
+    var submitBtn = $("<button>");
+    submitBtn.attr("id","submit-btn");
+    submitBtn.text("Submit");
+    submitBtn.on("click",function() {
+        submitQuestions(interestsArr);
+    })
+
+    var btnDiv = $('<div>');
+    btnDiv.attr("class","btn-set");
+    btnDiv.append(resetBtn);
+    btnDiv.append(submitBtn);
+    $("#form-div").append(btnDiv);
+
+}
+
 function renderQuestions() {
     var interestsArr = getInterestsObjArr();
     for (var i=0; i<interestsArr.length;i++) {
@@ -87,6 +114,27 @@ function renderQuestions() {
         questDiv.append(lbl);
         $("#form-div").append(questDiv);
     }
+    return interestsArr;
+}
+
+function resetQuestions(interestsArr) {
+
+}
+
+function submitQuestions(interestsArr) {
+    for (var i=0; i<interestsArr.length; i++) {
+        var id = "#input-" + i;
+        console.log(id);
+        // console.log($(id).val());
+        if ($(id).is(":checked")) {
+            var bool = 1;
+        } else {
+            var bool = 0;
+        }
+        console.log(bool);
+    }
 }
 
 init();
+
+// $('#chk').val();
