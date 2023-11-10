@@ -1,5 +1,5 @@
 
-function init() {
+function _init() {
     var nameLbl = $("<h4>");
     nameLbl.attr("id","name-lbl");
     nameLbl.attr("class","lbl");
@@ -34,9 +34,59 @@ function init() {
 
     var interestsArr = renderQuestions();
 
-    renderButtons(interestsArr);
+    buttonsRender(interestsArr);
 
 
+}
+
+function buttonsRender(interestsArr) {
+    var resetBtn = $("<button>");
+    resetBtn.attr("id","reset-btn");
+    resetBtn.text("Reset");
+    resetBtn.on("click",function() {
+        formReset(interestsArr);
+    })
+    
+    var submitBtn = $("<button>");
+    submitBtn.attr("id","submit-btn");
+    submitBtn.text("Submit");
+    submitBtn.on("click",function() {
+        formSubmit(interestsArr);
+    })
+
+    var btnDiv = $('<div>');
+    btnDiv.attr("class","btn-set");
+    btnDiv.append(resetBtn);
+    btnDiv.append(submitBtn);
+    $("#form-div").append(btnDiv);
+
+}
+
+function formReset(interestsArr) {
+    $("#name-inp").val("");
+    $("#email-inp").val("");
+    for (var i=0; i<interestsArr.length; i++) {
+        var id = "#input-" + i;
+        $(id).prop('checked', false);
+    }
+}
+
+function formSubmit(interestsArr) {
+    storageObj = {};
+    storageObj["fullName"] = $("#name-inp").val();
+    storageObj["email"] = $("#email-inp").val();
+    storageObj["questionsObj"] = {};
+    for (var i=0; i<interestsArr.length; i++) {
+        var id = "#input-" + i;
+        if ($(id).is(":checked")) {
+            var bool = 1;
+        } else {
+            var bool = 0;
+        }
+        storageObj["questionsObj"][interestsArr[i]["lbl"]] = bool;
+    }
+    console.log(storageObj);
+    storageSet(storageObj);
 }
 
 function getInterestsObjArr() {
@@ -71,29 +121,6 @@ function getInterestsObjArr() {
     }]
 }
 
-function renderButtons(interestsArr) {
-    var resetBtn = $("<button>");
-    resetBtn.attr("id","reset-btn");
-    resetBtn.text("Reset");
-    resetBtn.on("click",function() {
-        resetForm(interestsArr);
-    })
-    
-    var submitBtn = $("<button>");
-    submitBtn.attr("id","submit-btn");
-    submitBtn.text("Submit");
-    submitBtn.on("click",function() {
-        submitForm(interestsArr);
-    })
-
-    var btnDiv = $('<div>');
-    btnDiv.attr("class","btn-set");
-    btnDiv.append(resetBtn);
-    btnDiv.append(submitBtn);
-    $("#form-div").append(btnDiv);
-
-}
-
 function renderQuestions() {
     var interestsArr = getInterestsObjArr();
     for (var i=0; i<interestsArr.length;i++) {
@@ -117,33 +144,18 @@ function renderQuestions() {
     return interestsArr;
 }
 
-function resetForm(interestsArr) {
-    $("#name-inp").val("");
-    $("#email-inp").val("");
-    for (var i=0; i<interestsArr.length; i++) {
-        var id = "#input-" + i;
-        $(id).prop('checked', false);
-    }
+function storageGet() {    
+    var storageObjString = localStorage.getItem("storageObj");
+    var storageObj = JSON.parse(storageObjString);
+    return storageObj;
 }
 
-function submitForm(interestsArr) {
-    storageObj = {};
-    storageObj["fullName"] = $("#name-inp").val();
-    storageObj["email"] = $("#email-inp").val();
-    storageObj["questionsObj"] = {};
-    for (var i=0; i<interestsArr.length; i++) {
-        var id = "#input-" + i;
-        console.log(id);
-        if ($(id).is(":checked")) {
-            var bool = 1;
-        } else {
-            var bool = 0;
-        }
-        console.log(bool);
-        storageObj["questionsObj"][interestsArr[i]["lbl"]] = bool;
-    }
-    console.log(storageObj);
+function storageSet(storageObj) {
+    var storageObjString = JSON.stringify(storageObj);
+    localStorage.setItem("storageObj",storageObjString);
 }
 
-init();
+_init();
+
+// console.log(storageGet());
 
