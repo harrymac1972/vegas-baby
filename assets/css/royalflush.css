@@ -14,6 +14,28 @@ body {
     font-family: 'Segoe UI', sans-serif;
   }
   
+  h1 {
+    position: absolute;
+    top: 75%;
+    left: 28%;
+    font-size: 75px;
+    font-family: Verdana;
+    letter-spacing: 10px;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff00c4, #ff0000 );
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
   .card {
     
     width: 300px;
@@ -127,7 +149,7 @@ body {
   
   a:hover {
     text-decoration: none; 
-    color: rgb(87, 14, 14)
+    color: rgb(240, 223, 74)
   }
   
   #visit {
