@@ -21,19 +21,71 @@ body {
     font-size: 75px;
     font-family: Verdana;
     letter-spacing: 10px;
-    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff00c4, #ff0000 );
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff00c4, #ff0000);
     background-size: 400%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    animation: animate 10s linear infinite;
+    animation: animateText 10s linear infinite;
   }
   
-  @keyframes animate {
+  @keyframes animateText {
     0% {
       background-position: 0%;
     }
     100% {
       background-position: 400%;
+    }
+  }
+  
+  h3 {
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    font-size: 18px;
+    font-family: Verdana; 
+    color: #00eeff;
+    text-shadow: 2px 2px 2px black, 0 0 25px blue, 0 0 5px rgb(5, 5, 95);
+  }
+  
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%) rotate(90deg); /* Combine translations and rotation */
+    cursor: pointer;
+  }
+  
+  .arrow span {
+    display: block;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-bottom: 5px solid rgb(56, 39, 117);
+    border-right: 5px solid rgb(68, 73, 139);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animateArrow 2s infinite;
+  }
+  
+  .arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  
+  .arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+  
+  @keyframes animateArrow {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
     }
   }
   .card {
