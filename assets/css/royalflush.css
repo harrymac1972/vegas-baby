@@ -164,8 +164,7 @@ body {
   
   .card-img {
     grid-area: "image";
-    background: linear-gradient(#fff0 0%, #fff0, 70%, #dfd6d6 100%),
-      url("https://livingcities.org/wp-content/uploads/2021/04/AustinTX.jpg");
+    background: linear-gradient(#fff0 0%, #fff0, 70%, #dfd6d6 100%);
     background-size: cover;
     border-radius: 0 0 60% 60% / 0 0 20% 20%;
     box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(173, 49, 74);

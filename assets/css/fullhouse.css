@@ -5,7 +5,7 @@ body {
     background: grey;
     align-items: center;
     padding-top: 50px;
-    background-image: url("https://i.pinimg.com/originals/fb/8b/00/fb8b004b2cba331c14d0af92e2af6cd4.jpg");
+    background-image: url("https://images6.alphacoders.com/109/1094415.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,12 +43,12 @@ body {
     left: 13%;
     font-size: 18px;
     font-family: Verdana; 
-    color: #641a04;
+    color: rgb(18, 216, 12);
     text-shadow: 2px 2px 2px rgb(145, 85, 85), 0 0 25px rgb(0, 255, 200), 0 0 5px rgb(65, 65, 128);
   }
   
   
-  .arrow {
+  .prev-page {
     position: absolute;
     top: 50%;
     left: 90%;
@@ -56,22 +56,22 @@ body {
     cursor: pointer;
   }
   
-  .arrow span {
+  .prev-page span {
     display: block;
     width: 1.7vw;
     height: 1.7vw;
-    border-bottom: 8px solid rgb(211, 104, 3);
-    border-right: 8px solid rgb(212, 70, 4);
+    border-bottom: 8px solid rgb(131, 211, 3);
+    border-right: 8px solid rgb(87, 212, 4);
     margin: -10px;
     animation: animateArrow 2s infinite;
     border-radius: 3px;
   }
   
-  .arrow span:nth-child(2) {
+  .prev-page span:nth-child(2) {
     animation-delay: -0.2s;
   }
   
-  .arrow span:nth-child(3) {
+  .prev-page span:nth-child(3) {
     animation-delay: -0.4s;
   }
   
@@ -163,8 +163,7 @@ body {
   
   .card-img {
     grid-area: "image";
-    background: linear-gradient(#fff0 0%, #fff0, 70%, #dfd6d6 100%),
-      url("https://livingcities.org/wp-content/uploads/2021/04/AustinTX.jpg");
+    background: linear-gradient(#fff0 0%, #fff0, 70%, #dfd6d6 100%);
     background-size: cover;
     border-radius: 0 0 60% 60% / 0 0 20% 20%;
     box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(173, 49, 74);
@@ -241,24 +240,24 @@ body {
   
   /* Images location*/
   
-  #ten {
-    background-image: url("/assets/imgs/10-S.png")
+  #C9 {
+    background-image: url("/assets/imgs/9-C.png")
   }
   
-  #jack {
-    background-image: url("/assets/imgs/J-S.png");
+  #D9 {
+    background-image: url("/assets/imgs/9-D.png");
   }
   
-  #queen {
-    background-image: url("/assets/imgs/Q-S.png");
+  #H9 {
+    background-image: url("/assets/imgs/9-H.png");
   }
   
-  #king {
-    background-image: url("/assets/imgs/K-S.png"); 
+  #JC {
+    background-image: url("/assets/imgs/J-C.png"); 
   }
   
-  #ace {
-    background-image: url("/assets/imgs/A-S.png");
+  #JD {
+    background-image: url("/assets/imgs/J-D.png");
   }
   
   #sb {
@@ -266,20 +265,20 @@ body {
     background-image: url("https://raw.githubusercontent.com/kriskosta/siteimages/main/smallsbpic.jpg");
   }
   
-  #hustler {
-    background-image: url("https://funvideoworld.com/wp-content/uploads/2020/03/Strip-Clubs-In-Dallas.jpg");
+  #shopping {
+    background-image: url("https://miraclemileshopslv.com/");
   }
   
   #capo {
     background-image: url("https://media.cntraveler.com/photos/5a8453e5833f8a477b949503/16:9/w_2560,c_limit/Capo's_Tony-Gemignani_2018_Capo's-exterior-time-period.jpg");
   }
   
-  #helitour {
-    background-image: url("https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/f0/69/28.jpg");
+  #citytour {
+    background-image: url("https://www.usnews.com/dims4/USNEWS/03cfce3/2147483647/resize/1200x%3E/quality/85/?url=http:%2F%2Fmedia.beam.usnews.com%2F02%2F19%2Fc2bc806043948154216062d79683%2Fbbt-lv-img-5247.jpg");
   }
   
   #hotel {
-    background-image: url("https://images.getaroom-cdn.com/image/upload/s--gCsvwa3C--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1688588192/cd699a9f3ee9ff2a372b7ade85e653b04f0c3000?atc=e7cd1cfa");
+    background-image: url("https://i.pinimg.com/564x/26/13/68/26136865fd66284d3f385c61b96592ef.jpg");
   }
   
   #wynn {
