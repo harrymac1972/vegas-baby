@@ -1,3 +1,4 @@
+/* Body styling */
 body {
     display: flex;
     flex-wrap: wrap;
@@ -14,6 +15,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
   }
   
+  /* Main title styling */
   h1 {
     position: absolute;
     top: 75%;
@@ -28,6 +30,7 @@ body {
     animation: animateText 10s linear infinite;
   }
   
+  /* Text animation */
   @keyframes animateText {
     0% {
       background-position: 0%;
@@ -37,22 +40,23 @@ body {
     }
   }
   
+  /* Subtitle styling */
   h3 {
     position: absolute;
     top: 75%;
     left: 13%;
     font-size: 18px;
-    font-family: Verdana; 
+    font-family: Verdana;
     color: rgb(18, 216, 12);
     text-shadow: 2px 2px 2px rgb(145, 85, 85), 0 0 25px rgb(0, 255, 200), 0 0 5px rgb(65, 65, 128);
   }
   
-  
+  /* Previous page arrow styling */
   .prev-page {
     position: absolute;
     top: 50%;
     left: 90%;
-    transform: translate(-50%, -50%) rotate(270deg); /* Combine translations and rotation */
+    transform: translate(-50%, -50%) rotate(270deg);
     cursor: pointer;
   }
   
@@ -75,6 +79,7 @@ body {
     animation-delay: -0.4s;
   }
   
+  /* Arrow animation */
   @keyframes animateArrow {
     0% {
       opacity: 0;
@@ -88,13 +93,15 @@ body {
       transform: rotate(45deg) translate(20px, 20px);
     }
   }
+  
+  /* Card styling */
   .card {
-    
     width: 300px;
     height: 500px;
     border-radius: 18px;
   }
   
+  /* Card back styling */
   .card-back {
     margin-top: 100px;
     background: #8d72c2;
@@ -114,6 +121,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
   }
   
+  /* Front of the card styling */
   .thefront {
     margin-top: 100px;
     position: absolute;
@@ -127,25 +135,24 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
-    border-style: solid ;
+    border-style: solid;
     border-width: 1px;
     transform: rotateY(0deg);
     transition: all 1s ease;
     transform-style: preserve-3d;
   }
   
-  
-  
+  /* Card hover animation */
   .card:hover .thefront {
     transform: rotateY(180deg);
     box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(126, 17, 39);
-   }
-  
+  }
   
   .card:hover .card-back {
     transform: rotateY(0deg);
   }
   
+  /* Button styling */
   .btn {
     background: #54c3dd;
     padding: 10px;
@@ -155,12 +162,13 @@ body {
     text-decoration: none;
   }
   
+  /* Button hover styling */
   .btn:hover {
     background: #5b51e1;
     text-decoration: none;
-    
   }
   
+  /* Card image styling */
   .card-img {
     grid-area: "image";
     background: linear-gradient(#fff0 0%, #fff0, 70%, #dfd6d6 100%);
@@ -169,13 +177,11 @@ body {
     box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(173, 49, 74);
   }
   
-  
-  
+  /* Card description styling */
   .card-description {
     grid-area: text;
     font-family: 'roboto';
     margin-top: -10px;
-   
   }
   
   .card-description > p {
@@ -183,31 +189,35 @@ body {
     margin-top: -10px;
   }
   
+  /* Navigation links styling */
   .nav-links a {
     text-decoration: none;
     color: rgb(45, 0, 128);
     font-size: 20px;
     padding: 2px;
     font-family: 'Segoe UI';
-  
   }
   
+  /* General link styling */
   a {
     font-family: 'Segoe UI', sans-serif;
-    text-decoration: none; 
+    text-decoration: none;
     color: rgb(54, 8, 97);
   }
   
+  /* Link hover styling */
   a:hover {
-    text-decoration: none; 
+    text-decoration: none;
     color: rgb(240, 223, 74)
   }
   
+  /* Special styling for specific section */
   #visit {
     font-family: 'arial';
     text-transform: uppercase;
   }
   
+  /* Button styling */
   #booknowbtn {
     background: #54c3dd;
     background: linear-gradient(#f2eecb, #cfb997);
@@ -220,26 +230,28 @@ body {
     box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(173, 49, 74);
   }
   
+  /* Button hover styling */
   #booknowbtn:hover {
     cursor: pointer;
     background: #51a7e1;
   }
   
+  /* Card hover animation */
   .card:hover {
     transform: translateY(-1rem);
-    
   }
   
+  /* Card transition animation */
   .card:hover ~ .card {
     transform: translateX(130px);
   }
   
+  /* Spacing for cards */
   .card:not(:first-child) {
     margin-left: -130px;
   }
   
-  /* Images location*/
-  
+  /* Image styling for specific cards */
   #C9 {
     background-image: url("/assets/imgs/9-C.png")
   }
@@ -253,13 +265,12 @@ body {
   }
   
   #JC {
-    background-image: url("/assets/imgs/J-C.png"); 
+    background-image: url("/assets/imgs/J-C.png");
   }
   
   #JD {
     background-image: url("/assets/imgs/J-D.png");
   }
-  
   
   #shopping {
     background-image: url("https://miraclemileshopslv.com/wp-content/uploads/2021/07/north-entrance-advertising.jpg");
@@ -280,3 +291,4 @@ body {
   #casino {
     background-image: url("https://i.pinimg.com/564x/10/7b/3c/107b3ced4693b2b8dde703da9fbf07d0.jpg");
   }
+  
