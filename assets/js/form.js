@@ -7,6 +7,7 @@ function init() {
     nameLbl.text("Full Name:");
 
     var nameInp = $('<input type="text">');
+    nameInp.addClass ('name')
     nameInp.attr("id","name-inp");
 
     var nameDiv = $('<div>');
@@ -24,7 +25,7 @@ function init() {
 
     var emailInp = $('<input type="text">');
     emailInp.attr("id","email-inp");
-
+    emailInp.addClass('name')
     var emailDiv = $('<div>');
     emailDiv.attr("id","email-div");
     emailDiv.attr("class","input-set");
@@ -69,7 +70,7 @@ function getInterestsObjArr() {
         type:"check",
         default:"off"
     }]
-}
+};
 
 function renderButtons(interestsArr) {
     var resetBtn = $("<button>");
