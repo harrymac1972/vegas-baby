@@ -5,12 +5,94 @@ body {
     background: grey;
     align-items: center;
     padding-top: 50px;
-    background-image: url("https://i.pinimg.com/564x/91/fd/8e/91fd8e561de9d599fbe3c05550af7abc.jpg");
+    background-image: url("https://i.pinimg.com/originals/fb/8b/00/fb8b004b2cba331c14d0af92e2af6cd4.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h1 {
+    position: absolute;
+    top: 75%;
+    left: 28%;
+    font-size: 75px;
+    font-family: Verdana;
+    letter-spacing: 10px;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #00ff22, #51ff00, #ae00ff, #ff00c4, #ffa600);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animateText 10s linear infinite;
+  }
+  
+  @keyframes animateText {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+  
+  h3 {
+    position: absolute;
+    top: 75%;
+    left: 13%;
+    font-size: 18px;
+    font-family: Verdana; 
+    color: #641a04;
+    text-shadow: 2px 2px 2px rgb(145, 85, 85), 0 0 25px rgb(0, 255, 200), 0 0 5px rgb(65, 65, 128);
+  }
+  
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%) rotate(270deg); /* Combine translations and rotation */
+    cursor: pointer;
+  }
+  
+  .arrow span {
+    display: block;
+    width: 1.7vw;
+    height: 1.7vw;
+    border-bottom: 8px solid rgb(211, 104, 3);
+    border-right: 8px solid rgb(212, 70, 4);
+    margin: -10px;
+    animation: animateArrow 2s infinite;
+    border-radius: 3px;
+  }
+  
+  .arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  
+  .arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+  
+  @keyframes animateArrow {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+    }
+  }
+  .card {
+    
+    width: 300px;
+    height: 500px;
+    border-radius: 18px;
   }
   
   .card-back {
@@ -29,6 +111,7 @@ body {
     transform: rotateY(180deg);
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    font-family: 'Segoe UI', sans-serif;
   }
   
   .thefront {
@@ -39,19 +122,25 @@ body {
     border-radius: 18px;
     backface-visibility: hidden;
     overflow: hidden;
+    background-image: url("assets/spade.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    border-style: solid ;
+    border-width: 1px;
     transform: rotateY(0deg);
     transition: all 1s ease;
     transform-style: preserve-3d;
   }
   
+  
+  
   .card:hover .thefront {
     transform: rotateY(180deg);
-  }
+    box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(126, 17, 39);
+   }
+  
   
   .card:hover .card-back {
     transform: rotateY(0deg);
@@ -69,6 +158,7 @@ body {
   .btn:hover {
     background: #5b51e1;
     text-decoration: none;
+    
   }
   
   .card-img {
@@ -77,17 +167,41 @@ body {
       url("https://livingcities.org/wp-content/uploads/2021/04/AustinTX.jpg");
     background-size: cover;
     border-radius: 0 0 60% 60% / 0 0 20% 20%;
+    box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(173, 49, 74);
   }
+  
+  
   
   .card-description {
     grid-area: text;
     font-family: 'roboto';
     margin-top: -10px;
+   
   }
   
   .card-description > p {
     margin: 15px;
     margin-top: -10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: rgb(45, 0, 128);
+    font-size: 20px;
+    padding: 2px;
+    font-family: 'Segoe UI';
+  
+  }
+  
+  a {
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none; 
+    color: rgb(54, 8, 97);
+  }
+  
+  a:hover {
+    text-decoration: none; 
+    color: rgb(240, 223, 74)
   }
   
   #visit {
@@ -104,6 +218,7 @@ body {
     color: white;
     margin-top: 30px;
     text-decoration: none;
+    box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(173, 49, 74);
   }
   
   #booknowbtn:hover {
@@ -113,6 +228,7 @@ body {
   
   .card:hover {
     transform: translateY(-1rem);
+    
   }
   
   .card:hover ~ .card {
@@ -126,23 +242,23 @@ body {
   /* Images location*/
   
   #ten {
-    background-image: url("assets/imgs/10-S.png");
+    background-image: url("/assets/imgs/10-S.png")
   }
   
   #jack {
-    background-image: url("assets/imgs/J-S.png");
+    background-image: url("/assets/imgs/J-S.png");
   }
   
   #queen {
-    background-image: url("assets/imgs/Q-S.png");
+    background-image: url("/assets/imgs/Q-S.png");
   }
   
   #king {
-    background-image: url("assets/imgs/K-S.png");
+    background-image: url("/assets/imgs/K-S.png"); 
   }
   
   #ace {
-    background-image: url("assets/imgs/A-S.png");
+    background-image: url("/assets/imgs/A-S.png");
   }
   
   #sb {

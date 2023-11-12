@@ -40,7 +40,7 @@ body {
   h3 {
     position: absolute;
     top: 75%;
-    left: 15%;
+    left: 13%;
     font-size: 18px;
     font-family: Verdana; 
     color: #00eeff;
@@ -58,13 +58,14 @@ body {
   
   .arrow span {
     display: block;
-    width: 1.5vw;
-    height: 1.5vw;
-    border-bottom: 5px solid rgb(56, 39, 117);
-    border-right: 5px solid rgb(68, 73, 139);
+    width: 1.7vw;
+    height: 1.7vw;
+    border-bottom: 8px solid rgb(106, 81, 196);
+    border-right: 8px solid rgb(80, 63, 138);
     transform: rotate(45deg);
     margin: -10px;
     animation: animateArrow 2s infinite;
+    border-radius: 3px;
   }
   
   .arrow span:nth-child(2) {
