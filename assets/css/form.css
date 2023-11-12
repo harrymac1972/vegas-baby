@@ -11,12 +11,21 @@ input {
 .input-set {
     display: flex;
     flex-direction: row;
+    margin-right: 50px;
 }
 
 .quest-set {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    background-color: #1C6EA4;
+   box-shadow: 3px 3px 3px 3px #090101;
+    margin: 10px auto 0;
+    width: 200px;
+    height: 60px;
+    color: gold;
+    padding: 5px;
+   
 }
 
 #form-div {
@@ -24,6 +33,18 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: rgb(218, 218, 230);
+    background-color: rgb(172, 65, 226);
+    
+}
+
+.btn-set {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+
+
 }
