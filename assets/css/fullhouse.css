@@ -260,16 +260,12 @@ body {
     background-image: url("/assets/imgs/J-D.png");
   }
   
-  #sb {
-    background-position: bottom;
-    background-image: url("https://raw.githubusercontent.com/kriskosta/siteimages/main/smallsbpic.jpg");
-  }
   
   #shopping {
-    background-image: url("https://miraclemileshopslv.com/");
+    background-image: url("https://miraclemileshopslv.com/wp-content/uploads/2021/07/north-entrance-advertising.jpg");
   }
   
-  #capo {
+  #restaurant {
     background-image: url("https://media.cntraveler.com/photos/5a8453e5833f8a477b949503/16:9/w_2560,c_limit/Capo's_Tony-Gemignani_2018_Capo's-exterior-time-period.jpg");
   }
   
@@ -281,6 +277,6 @@ body {
     background-image: url("https://i.pinimg.com/564x/26/13/68/26136865fd66284d3f385c61b96592ef.jpg");
   }
   
-  #wynn {
-    background-image: url("https://i.pinimg.com/564x/4a/bd/3d/4abd3d00f943aa7b888e122f543d39e4.jpg");
+  #casino {
+    background-image: url("https://i.pinimg.com/564x/10/7b/3c/107b3ced4693b2b8dde703da9fbf07d0.jpg");
   }
