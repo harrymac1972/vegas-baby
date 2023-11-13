@@ -1,5 +1,10 @@
 
 function _init() {
+
+    var detailsDiv = $('<div>');
+    detailsDiv.attr("id","details-div");
+    $("#form-div").append(detailsDiv);
+
     var nameLbl = $("<h4>");
     nameLbl.attr("id","name-lbl");
     nameLbl.attr("class","lbl");
@@ -15,7 +20,7 @@ function _init() {
     nameDiv.attr("class","input-set");
     nameDiv.append(nameLbl);
     nameDiv.append(nameInp);
-    $("#form-div").append(nameDiv);
+    detailsDiv.append(nameDiv);
 
     var emailLbl = $("<h4>");
     emailLbl.attr("id","email-lbl");
@@ -31,7 +36,7 @@ function _init() {
     emailDiv.attr("class","input-set");
     emailDiv.append(emailLbl);
     emailDiv.append(emailInp);
-    $("#form-div").append(emailDiv);
+    detailsDiv.append(emailDiv);
 
     var interestsArr = renderQuestions();
 
@@ -54,6 +59,7 @@ function buttonsRender(interestsArr) {
     })
 
     var btnDiv = $('<div>');
+    btnDiv.attr("id","btn-div");
     btnDiv.attr("class","btn-set");
     btnDiv.append(resetBtn);
     btnDiv.append(submitBtn);
@@ -125,6 +131,14 @@ function getInterestsObjArr() {
 };
 
 function renderQuestions() {
+    var questionsOneDiv = $('<div>');
+    questionsOneDiv.attr("id","questions-one-div");
+    $("#form-div").append(questionsOneDiv);
+
+    var questionsTwoDiv = $('<div>');
+    questionsTwoDiv.attr("id","questions-two-div");
+    $("#form-div").append(questionsTwoDiv);
+
     var interestsArr = getInterestsObjArr();
     for (var i=0; i<interestsArr.length;i++) {
         var lbl = $("<h4>");
@@ -142,12 +156,17 @@ function renderQuestions() {
         questDiv.attr("class","quest-set");
         questDiv.append(chk);
         questDiv.append(lbl);
-        $("#form-div").append(questDiv);
+
+        if (i < 4) {
+            questionsOneDiv.append(questDiv);
+        } else {
+            questionsTwoDiv.append(questDiv);
+        }
     }
     return interestsArr;
 }
 
-function storageGet() {    
+function storageGet() {
     var storageObjString = localStorage.getItem("storageObj");
     var storageObj = JSON.parse(storageObjString);
     return storageObj;
