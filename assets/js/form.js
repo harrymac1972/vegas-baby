@@ -157,7 +157,7 @@ function renderQuestions() {
         questDiv.append(chk);
         questDiv.append(lbl);
 
-        if (i < 4) {
+        if (i < Math.round(interestsArr.length / 2)) {
             questionsOneDiv.append(questDiv);
         } else {
             questionsTwoDiv.append(questDiv);
