@@ -26,7 +26,7 @@ function _init() {
     emailLbl.attr("id","email-lbl");
     emailLbl.attr("class","lbl");
     emailLbl.attr("for","email-inp");
-    emailLbl.text("email:");
+    emailLbl.text("E-mail:");
 
     var emailInp = $('<input type="text">');
     emailInp.attr("id","email-inp");
@@ -127,8 +127,17 @@ function getInterestsObjArr() {
         lbl:"Water Sports?",
         type:"check",
         default:"off"
+    },{
+        lbl:"Hotels?",
+        type:"check",
+        default:"off"
+    },{
+        lbl:"Restaurants?",
+        type:"check",
+        default:"off"
     }]
 };
+
 
 function renderQuestions() {
     var questionsOneDiv = $('<div>');
