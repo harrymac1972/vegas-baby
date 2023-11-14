@@ -10,40 +10,40 @@ sites and images Project 1
 
 Restaurants:
 
-https://www.fourqueens.com/dining/hugos_cellar/index.php
+https://www.fourqueens.com/dining/hugos_cellar/index.php (Premium)
 
-https://www.vicandanthonys.com/location/las-vegas/
+https://www.vicandanthonys.com/location/las-vegas/ (Basic/Premium)
 
-www.heartattackgrill.com
+www.heartattackgrill.com (basic)
 
 
 Hotels:
 
-https://www.venetianlasvegas.com/
+https://www.venetianlasvegas.com/ (Premium)
 
-https://mandalaybay.mgmresorts.com/
+https://mandalaybay.mgmresorts.com/ (basic/Premium)
 
-https://aria.mgmresorts.com/
+https://aria.mgmresorts.com/ (Basic)
 
 
 Casino:
 
-https://www.caesars.com/
+https://www.caesars.com/ (basic)
 
-https://www.goldennugget.com/
+https://www.goldennugget.com/ (Basic/Premium)
 
-https://bellagio.mgmresorts.com/
+https://bellagio.mgmresorts.com/ (Premium)
 
 
 
 
 nightclubs:
 
-https://taogroup.com/venues/hakkasan-nightclub-las-vegas/
+https://taogroup.com/venues/hakkasan-nightclub-las-vegas/ (premium)
 
-https://www.wynnlasvegas.com/nightlife/xs-nightclub
+https://www.wynnlasvegas.com/nightlife/xs-nightclub (Basic/Premium)
 
-https://www.wynnsocial.com/?_gl=1%2A1ylqr3l%2A_gcl_au%2AMzYwMTc4MzQ0LjE2OTkzMTY4Mzc.
+https://www.wynnsocial.com/?_gl=1%2A1ylqr3l%2A_gcl_au%2AMzYwMTc4MzQ0LjE2OTkzMTY4Mzc. (basic)
 
 
 
@@ -51,28 +51,28 @@ https://www.wynnsocial.com/?_gl=1%2A1ylqr3l%2A_gcl_au%2AMzYwMTc4MzQ0LjE2OTkzMTY4
 
 Tours:
 
-https://sweetours.com/
+https://sweetours.com/ (basic)
 
-https://www.pinkadventuretours.com/
+https://www.pinkadventuretours.com/ (Basic/Premium)
 
-https://www.maverickhelicopter.com/las-vegas-nights-tour
+https://www.maverickhelicopter.com/las-vegas-nights-tour (Premium)
 
 
 
 Shopping Spots:
 
-https://www.grandcanalshoppes.com/en.html
+https://www.grandcanalshoppes.com/en.html (Premium)
 
-https://miraclemileshopslv.com/
+https://miraclemileshopslv.com/(basic)
 
-https://broadacresm.com/
+https://broadacresm.com/ (basic/Premium)
 
 
 Personal Security:
 
-https://surrealnightlife.com/las-vegas/guide/personal-security-service.html
+https://surrealnightlife.com/las-vegas/guide/personal-security-service.html (premium)
 
-https://lvepevents.com/entertainment/bodyguards/
+https://lvepevents.com/entertainment/bodyguards/ (basic)
 
-https://archerwestsc.com/vip-executive-protection/
+https://archerwestsc.com/vip-executive-protection/ (basic/Premium)
 
