@@ -141,13 +141,20 @@ function getInterestsObjArr() {
 
 
 function renderQuestions() {
+
+    var questionsDiv = $("<div>");
+    questionsDiv.attr("id","questions-div");
+    $("#form-div").append(questionsDiv);
+
     var questionsOneDiv = $('<div>');
     questionsOneDiv.attr("id","questions-one-div");
-    $("#form-div").append(questionsOneDiv);
+    questionsOneDiv.attr("class","questions-group");
+    questionsDiv.append(questionsOneDiv);
 
     var questionsTwoDiv = $('<div>');
     questionsTwoDiv.attr("id","questions-two-div");
-    $("#form-div").append(questionsTwoDiv);
+    questionsOneDiv.attr("class","questions-group");
+    questionsDiv.append(questionsTwoDiv);
 
     var interestsArr = getInterestsObjArr();
     for (var i=0; i<interestsArr.length;i++) {
