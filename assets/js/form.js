@@ -238,10 +238,10 @@ function setVisibilities() {
     console.log(packageType);
     if (packageType === "basic") {
         $("#premium-div").attr("class","questions-group hid");
-        $("#upgrade-btn").attr("class","");
+        $("#upgrade-btn").attr("class","vis");
     } else {
         $("#upgrade-btn").attr("class","hid");
-        $("#premium-div").attr("class","");
+        $("#premium-div").attr("class","questions-group");
     }
 }
 
