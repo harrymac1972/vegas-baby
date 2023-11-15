@@ -1,6 +1,6 @@
 
 
-#main-div {  
+.main-basic-div {  
     position: absolute;
     top: 0;
     right: 0;
@@ -11,8 +11,22 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: .8;
+    opacity: 1;
 }
+.main-premium-div {  
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    background-image: url('../imgs/vegas-exotic-limo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+}
+
 
 input {
     float: left;
