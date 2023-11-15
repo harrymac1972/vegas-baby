@@ -38,7 +38,7 @@
   #button2 {
     position: absolute;
     top: 50px;
-   right: 0;
+   right: 25px;
     
   }
 
@@ -47,4 +47,13 @@
   position: absolute;
   top: 50px;
   left: 300px;
+}
+
+.carousel-item{
+  border: 10px solid rgb(240, 154, 7);
+    border-radius: 10px;
+  width: 25%;
+  height: 100%;
+
+ 
 }
