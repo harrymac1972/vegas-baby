@@ -177,9 +177,11 @@ function renderBasicQuestions() {
 
     var upgradeBtn = $("<button>");
     upgradeBtn.attr("id","upgrade-btn");
-    // upgradeBtn.attr("class","quest-set");
     upgradeBtn.text("PREMIUM OPTIONS!");
-    premiumDiv.append(upgradeBtn);
+    premiumDiv.append(upgradeBtn);    
+    upgradeBtn.on("click",function() {
+        upgradeOptions();
+    })
 
     var basicInterestsArr = getInterestsObjArr();
     for (var i=0; i<basicInterestsArr.length;i++) {
@@ -222,6 +224,12 @@ function storageGet() {
 function storageSet(storageObj) {
     var storageObjString = JSON.stringify(storageObj);
     localStorage.setItem("storageObj",storageObjString);
+}
+
+function upgradeOptions() {    
+    localStorage.setItem("packageType","premium");
+    $("#main-div").attr("class","main-premium-div");
+    $("#upgrade-btn").remove();
 }
 
 _init();
