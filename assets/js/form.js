@@ -42,7 +42,6 @@ function _init() {
     var emailInp = $('<input type="text">');
     emailInp.attr("id","email-inp");
     
-    
     var emailDiv = $('<div>');
     emailDiv.attr("id","email-div");
     emailDiv.attr("class","input-set");
@@ -50,27 +49,23 @@ function _init() {
     emailDiv.append(emailInp);
     detailsDiv.append(emailDiv);
 
-    var basicInterestsArr = renderBasicQuestions();
-    if (packageType === "premium") {
-        var premiumInterestsArr = renderPremiumQuestions();
-    }
-
-    buttonsRender(basicInterestsArr,premiumInterestsArr);
+    var interestsArr = renderBasicQuestions(packageType);
+    buttonsRender(interestsArr);
 }
 
-function buttonsRender(basicInterestsArr,premiumInterestsArr) {
+function buttonsRender(interestsArr) {
     var resetBtn = $("<button>");
     resetBtn.attr("id","reset-btn");
     resetBtn.text("Reset");
     resetBtn.on("click",function() {
-        formReset(basicInterestsArr);
+        formReset(interestsArr);
     })
     
     var submitBtn = $("<button>");
     submitBtn.attr("id","submit-btn");
     submitBtn.text("Submit");
     submitBtn.on("click",function() {
-        formSubmit(basicInterestsArr);
+        formSubmit(interestsArr);
     })
 
     var btnDiv = $('<div>');
@@ -79,83 +74,107 @@ function buttonsRender(basicInterestsArr,premiumInterestsArr) {
     btnDiv.append(resetBtn);
     btnDiv.append(submitBtn);
     $("#form-div").append(btnDiv);
-
 }
 
-function formReset(basicInterestsArr) {
+function formReset(interestsArr) {
+    localStorage.setItem("packageType","basic");
+    $("#main-div").attr("class","main-basic-div");
     $("#name-inp").val("");
     $("#email-inp").val("");
-    for (var i=0; i<basicInterestsArr.length; i++) {
+    for (var i=0; i<interestsArr.length; i++) {
         var id = "#input-" + i;
         $(id).prop('checked', false);
     }
 }
 
-function formSubmit(basicInterestsArr) {
+function formSubmit(interestsArr) {
     storageObj = {};
     storageObj["fullName"] = $("#name-inp").val();
     storageObj["email"] = $("#email-inp").val();
     storageObj["questionsObj"] = {};
-    for (var i=0; i<basicInterestsArr.length; i++) {
+    for (var i=0; i<interestsArr.length; i++) {
         var id = "#input-" + i;
         if ($(id).is(":checked")) {
             var bool = 1;
         } else {
             var bool = 0;
         }
-        storageObj["questionsObj"][basicInterestsArr[i]["lbl"]] = bool;
+        storageObj["questionsObj"][interestsArr[i]["lbl"]] = bool;
     }
     console.log(storageObj);
     storageSet(storageObj);
 }
 
+function getAmountBasicQuestions(interestsArr) {
+    var basicAmt = 0;
+    for (var i = 0; i<interestsArr.length; i++) {
+        if (interestsArr[i]["type"] === "basic") {
+            basicAmt++;
+        }
+    }
+    return basicAmt;
+}
+
 function getInterestsObjArr() {
     return [{
         lbl:"Gambling?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
         lbl:"Nightclubs?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
         lbl:"Concerts / Shows?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
         lbl:"Shopping?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
         lbl:"Out of Town Excursions?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
         lbl:"Sporting Events?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
         lbl:"Motor Sports?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
         lbl:"Water Sports?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
         lbl:"Hotels?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
         lbl:"Restaurants?",
-        type:"check",
-        default:"off"
+        type:"basic",
+    },{
+        lbl:"Private Security?",
+        type:"premium",
+    },{
+        lbl:"Limousine + Butler?",
+        type:"premium",
+    },{
+        lbl:"Helicopter Tours?",
+        type:"premium",
+    },{
+        lbl:"High Stakes Gambling?",
+        type:"premium",
+    },{
+        lbl:"Celebrity Meets?",
+        type:"premium",
     }]
 };
 
+function makeUpgradeBtn(premiumDiv) {
+    var upgradeBtn = $("<button>");
+    upgradeBtn.attr("id","upgrade-btn");
+    upgradeBtn.text("PREMIUM OPTIONS!");
+    premiumDiv.append(upgradeBtn);    
+    upgradeBtn.on("click",function() {
+        upgradeOptions();
+    })
+}
 
-function renderBasicQuestions() {
-
+function renderBasicQuestions(packageType) {
     var questionsDiv = $("<div>");
     questionsDiv.attr("id","questions-div");
     $("#form-div").append(questionsDiv);
@@ -167,29 +186,26 @@ function renderBasicQuestions() {
 
     var questionsTwoDiv = $('<div>');
     questionsTwoDiv.attr("id","questions-two-div");
-    questionsOneDiv.attr("class","questions-group");
+    questionsTwoDiv.attr("class","questions-group");
     questionsDiv.append(questionsTwoDiv);
 
     var premiumDiv = $('<div>');
     premiumDiv.attr("id","premium-div");
-    questionsOneDiv.attr("class","questions-group");
+    premiumDiv.attr("class","questions-group");
     questionsDiv.append(premiumDiv);
 
-    var upgradeBtn = $("<button>");
-    upgradeBtn.attr("id","upgrade-btn");
-    upgradeBtn.text("PREMIUM OPTIONS!");
-    premiumDiv.append(upgradeBtn);    
-    upgradeBtn.on("click",function() {
-        upgradeOptions();
-    })
+    if (packageType === "basic") {
+        makeUpgradeBtn(premiumDiv);
+    }
 
-    var basicInterestsArr = getInterestsObjArr();
-    for (var i=0; i<basicInterestsArr.length;i++) {
+    var interestsArr = getInterestsObjArr();
+    var basicAmt = getAmountBasicQuestions(interestsArr);
+    for (var i=0; i<interestsArr.length;i++) {
         var lbl = $("<h4>");
         var id = "quest-" + i;
         lbl.attr("id",id);
         lbl.attr("class","quest-lbl");
-        lbl.text(basicInterestsArr[i]["lbl"]);
+        lbl.text(interestsArr[i]["lbl"]);
           
         var chk = $("<input type='checkbox'>");
         var id = "input-" + i;
@@ -201,18 +217,19 @@ function renderBasicQuestions() {
         questDiv.append(chk);
         questDiv.append(lbl);
 
-        if (i < Math.round(basicInterestsArr.length / 2)) {
-            questionsOneDiv.append(questDiv);
-        } else {
-            questionsTwoDiv.append(questDiv);
+        if (interestsArr[i]["type"] === "basic") {
+            if (i < Math.round(basicAmt / 2)) {
+                questionsOneDiv.append(questDiv);
+            } else {
+                questionsTwoDiv.append(questDiv);
+            }
+        } else {         
+            if (packageType === "premium") {   
+                premiumDiv.append(questDiv);
+            }
         }
     }
-    return basicInterestsArr;
-}
-
-function renderPremiumQuestions() {
-    premiumInterestsArr = "[FLESH OUT LATER]";
-    return premiumInterestsArr;
+    return interestsArr;
 }
 
 function storageGet() {
@@ -226,7 +243,7 @@ function storageSet(storageObj) {
     localStorage.setItem("storageObj",storageObjString);
 }
 
-function upgradeOptions() {    
+function upgradeOptions() {
     localStorage.setItem("packageType","premium");
     $("#main-div").attr("class","main-premium-div");
     $("#upgrade-btn").remove();
