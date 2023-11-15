@@ -1,3 +1,19 @@
+
+
+#main-div {  
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    background-image: url('../imgs/night-vegas.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .8;
+}
+
 input {
     float: left;
     padding: 0.125rem;
@@ -20,7 +36,7 @@ input {
     border: solid white;
     border-radius: 10px;
     text-align: left;
-    width: 400px;   
+    width: 400px;  
 }
 
 .questions-group {
@@ -61,7 +77,8 @@ input.quest-input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 5rem;
+    opacity: 1;
 }
 
 #name-div, #email-div {
