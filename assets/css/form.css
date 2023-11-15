@@ -1,32 +1,8 @@
-
-
-.main-basic-div {  
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    background-image: url('../imgs/night-vegas.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
+:root {
+    --blue-2: #1C6EA4;
+    --neon-pink-2: #ff5cfa;
+    --neon-pink-3: #ff00f7;
 }
-.main-premium-div {  
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    background-image: url('../imgs/vegas-exotic-limo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
-}
-
 
 input {
     float: left;
@@ -35,20 +11,21 @@ input {
 }
 
 .lbl {
-    margin-right: 0}
+    margin-right: 0;
+}
 
 .quest-set {
     display: block;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: #1C6EA4;
-    box-shadow: 3px 3px 3px 3px #090101;
+    background-color: var(--blue-2);
+    box-shadow: 2px 2px 2px 2px #090101;
     margin: 10px auto 0;
-    color: gold;
+    color: var(--neon-pink-2);
     padding: 5px;
     border: solid white;
-    border-radius: 10px;
+    border-radius: .5em;
     text-align: left;
     width: 400px;  
 }
@@ -79,10 +56,12 @@ input.quest-input {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 1rem 0;
-    padding: 5px;
+    margin: 1em 0;
+    padding: 1em;
     text-size-adjust: auto;
-    color: gold;
+    color: var(--neon-pink-3);
+    background-color: var(--blue-2);
+    border-radius: .5em;
     
 }
 
@@ -92,7 +71,18 @@ input.quest-input {
     justify-content: center;
     align-items: center;
     margin-top: 5rem;
-    opacity: 1;
+}
+
+#main-div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #name-div, #email-div {
@@ -104,17 +94,21 @@ input.quest-input {
     flex-direction: row;
 }
 
-#reset-btn, #submit-btn{
+#reset-btn, 
+#submit-btn {
     width: 150px;
     margin: 10px;
-    border: solid 5px white;
-    border-radius: 10px;
+    border: solid white;
+    border-radius: .5em;
+    background-color: var(--blue-2);
+    color: var(--neon-pink-2);
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px #090101;
 }
 
-#reset-btn {
-    background-color: orange;
+.main-basic-div {
+    background-image: url('../imgs/night-vegas.png');
 }
-
-#submit-btn {
-    background-color: green;
+.main-premium-div {
+    background-image: url('../imgs/shutterstock_1870427674.jpg');
 }

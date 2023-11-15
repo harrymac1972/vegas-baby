@@ -1,15 +1,15 @@
 
 function _init() {
     var packageType = localStorage.getItem("packageType");
-    if (packageType === null) {
+    if (packageType != "basic" && packageType != "premium") {
         localStorage.setItem("packageType","basic");
         var packageType = localStorage.getItem("packageType");
     }
     console.log(packageType);
-    if (packageType === "basic") {
-        $("#main-div").attr("class","main-basic-div");
-    } else {
+    if (packageType === "premium") {
         $("#main-div").attr("class","main-premium-div");
+    } else {
+        $("#main-div").attr("class","main-basic-div");
     }
 
     var detailsDiv = $('<div>');
