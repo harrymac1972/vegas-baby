@@ -51,6 +51,8 @@ function _init() {
 
     var interestsArr = renderBasicQuestions(packageType);
     buttonsRender(interestsArr);
+
+    setVisibilities();
 }
 
 function buttonsRender(interestsArr) {
@@ -85,6 +87,7 @@ function formReset(interestsArr) {
         var id = "#input-" + i;
         $(id).prop('checked', false);
     }
+    setVisibilities();
 }
 
 function formSubmit(interestsArr) {
@@ -164,11 +167,11 @@ function getInterestsObjArr() {
     }]
 };
 
-function makeUpgradeBtn(premiumDiv) {
+function makeUpgradeBtn(questionsDiv) {
     var upgradeBtn = $("<button>");
     upgradeBtn.attr("id","upgrade-btn");
     upgradeBtn.text("PREMIUM OPTIONS!");
-    premiumDiv.append(upgradeBtn);    
+    questionsDiv.append(upgradeBtn);    
     upgradeBtn.on("click",function() {
         upgradeOptions();
     })
@@ -195,7 +198,7 @@ function renderBasicQuestions(packageType) {
     questionsDiv.append(premiumDiv);
 
     if (packageType === "basic") {
-        makeUpgradeBtn(premiumDiv);
+        makeUpgradeBtn(questionsDiv);
     }
 
     var interestsArr = getInterestsObjArr();
@@ -223,13 +226,23 @@ function renderBasicQuestions(packageType) {
             } else {
                 questionsTwoDiv.append(questDiv);
             }
-        } else {         
-            if (packageType === "premium") {   
+        } else {
                 premiumDiv.append(questDiv);
-            }
         }
     }
     return interestsArr;
+}
+
+function setVisibilities() {
+    var packageType = localStorage.getItem("packageType");
+    console.log(packageType);
+    if (packageType === "basic") {
+        $("#premium-div").attr("class","questions-group hid");
+        $("#upgrade-btn").attr("class","");
+    } else {
+        $("#upgrade-btn").attr("class","hid");
+        $("#premium-div").attr("class","");
+    }
 }
 
 function storageGet() {
@@ -246,7 +259,7 @@ function storageSet(storageObj) {
 function upgradeOptions() {
     localStorage.setItem("packageType","premium");
     $("#main-div").attr("class","main-premium-div");
-    $("#upgrade-btn").remove();
+    setVisibilities();
 }
 
 _init();
