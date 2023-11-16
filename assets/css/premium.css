@@ -1,3 +1,14 @@
+body {
+  padding-top: 50px;
+  background-image: url("../imgs/background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Segoe UI", sans-serif;
+}
+
 .button-1,
 .button-2 {
   color: rgb(255, 255, 255);
@@ -32,16 +43,14 @@
   background: #417514;
 }
 .button-2:active {
-    background: #5d1475;
-  }
-  
-  #button2 {
-    position: absolute;
-    top: 50px;
-   right: 25px;
-    
-  }
+  background: #5d1475;
+}
 
+#button2 {
+  position: absolute;
+  top: 50px;
+  right: 25px;
+}
 
 #button {
   position: absolute;
@@ -49,11 +58,14 @@
   left: 300px;
 }
 
-.carousel-item{
-  border: 10px solid rgb(240, 154, 7);
-    border-radius: 10px;
-  width: 25%;
-  height: 100%;
-
- 
+img {
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 200px;
+  max-height: 200px;
+}
+.container {
+  margin-top: 30%;
+  display: flex;
+  justify-content: center;
 }
