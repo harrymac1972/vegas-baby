@@ -120,19 +120,10 @@ function getAmountBasicQuestions(interestsArr) {
 
 function getInterestsObjArr() {
     return [{
-        lbl:"Gambling?",
+        lbl:"Concerts?",
         type:"basic",
     },{
-        lbl:"Nightclubs?",
-        type:"basic",
-    },{
-        lbl:"Concerts / Shows?",
-        type:"basic",
-    },{
-        lbl:"Shopping?",
-        type:"basic",
-    },{
-        lbl:"Out of Town Excursions?",
+        lbl:"Shows?",
         type:"basic",
     },{
         lbl:"Sporting Events?",
@@ -141,7 +132,7 @@ function getInterestsObjArr() {
         lbl:"Motor Sports?",
         type:"basic",
     },{
-        lbl:"Water Sports?",
+        lbl:"Flights?",
         type:"basic",
     },{
         lbl:"Hotels?",
@@ -150,19 +141,13 @@ function getInterestsObjArr() {
         lbl:"Restaurants?",
         type:"basic",
     },{
-        lbl:"Private Security?",
-        type:"premium",
-    },{
-        lbl:"Limousine + Butler?",
-        type:"premium",
-    },{
         lbl:"Helicopter Tours?",
         type:"premium",
     },{
         lbl:"High Stakes Gambling?",
         type:"premium",
     },{
-        lbl:"Celebrity Meets?",
+        lbl:"Backstage Passes?",
         type:"premium",
     }]
 };
