@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketmaster Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="ticketmaster.css">
+</head>
+<body>
+
+    <h1>Las Vegas Events List</h1>
+
+    <form id="eventForm">
+        <label for="cityInput">Enter City:</label>
+        <input type="text" id="cityInput" value="Las Vegas">
+        <label for="numberOfEvents">Number of Events:</label>
+        <input type="number" id="numberOfEvents" value="3" min="1" max="10">
+        <label for="searchInput">Search Event:</label>
+        <input type="text" id="searchInput" placeholder="Enter event name">
+        <button type="submit">Get Events</button>
+    </form>
+
+    <div id="event-info"></div>
+
+    <script src="ticketmaster.js"></script>
+</body>
+</html>
