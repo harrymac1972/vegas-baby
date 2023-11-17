@@ -254,23 +254,23 @@ body {
   
   /* Image styling for specific cards */
   #C9 {
-    background-image: url("/assets/imgs/9-C.png")
+    background-image: url("../imgs/9-C.png")
   }
   
   #D9 {
-    background-image: url("/assets/imgs/9-D.png");
+    background-image: url("../imgs/9-D.png");
   }
   
   #H9 {
-    background-image: url("/assets/imgs/9-H.png");
+    background-image: url("../imgs/9-H.png");
   }
   
   #JC {
-    background-image: url("/assets/imgs/J-C.png");
+    background-image: url("../imgs/J-C.png");
   }
   
   #JD {
-    background-image: url("/assets/imgs/J-D.png");
+    background-image: url("../imgs/J-D.png");
   }
   
   #shopping {

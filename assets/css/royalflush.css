@@ -254,23 +254,23 @@ body {
   
   /* Image styling for specific cards */
   #ten {
-    background-image: url("/assets/imgs/10-S.png");
+    background-image: url("../imgs/10-S.png");
   }
   
   #jack {
-    background-image: url("/assets/imgs/J-S.png");
+    background-image: url("../imgs/J-S.png");
   }
   
   #queen {
-    background-image: url("/assets/imgs/Q-S.png");
+    background-image: url("../imgs/Q-S.png");
   }
   
   #king {
-    background-image: url("/assets/imgs/K-S.png");
+    background-image: url("../imgs/K-S.png");
   }
   
   #ace {
-    background-image: url("/assets/imgs/A-S.png");
+    background-image: url("../imgs/A-S.png");
   }
   
   #nightclub {
