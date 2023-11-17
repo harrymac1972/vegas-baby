@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items:center ;
+    background: rgb(54, 68, 122);
 }
 .header {
     background-color: darkslategray;
@@ -30,6 +31,100 @@ h1 {
     font-family:'Lato', sans-serif;
 
 }
+
+.butt {
+	position: absolute;
+	top: 15%;
+    left: 4%;
+	height: 80px;
+	width: 260px;
+	border-radius: 8px;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	display: flex;
+	overflow: hidden;
+	
+}
+.butt:nth-child(2) {
+    top: 34%;
+}
+
+.butt:nth-child(3) {
+    top: 53%;
+}
+
+.butt:nth-child(4) {
+    top: 72%;
+}
+
+.butt::before{
+	position: absolute;
+	content: "";
+	height: 77px;
+	width: 270px;
+	animation: anos 5s  linear infinite;
+}
+
+.butt:nth-child(1)::before {
+
+    animation: anos 7s linear infinite;
+	background: linear-gradient(60deg,#8a09f4,#08ffad);
+}
+
+.butt:nth-child(2)::before {
+	
+    animation: anos 5s linear infinite 1s; 
+	background: linear-gradient(60deg,#f4093c,#05bbf2);/* Delay the animation by 1 second */
+}
+
+.butt:nth-child(3)::before {
+    animation: anos 5s linear infinite 2s;
+	background: linear-gradient(60deg,#40f409,#daf205); /* Delay the animation by 2 seconds */
+}
+
+.butt:nth-child(4)::before {
+    animation: anos 5s linear infinite 3s;
+	background: linear-gradient(60deg,#f40909,#7f05f2); /* Delay the animation by 3 seconds */
+}
+.butt::after{
+	position: absolute;
+	content: "";
+	height: 76px;
+	width: 256px;
+	background: rgb(37, 37, 65);
+	border-radius: 10px;
+}
+
+
+@keyframes anos{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		transform: rotate(350deg);
+	}
+}
+.butt a:hover{
+	color: #b3f205c2;
+	transition: 2s;
+	display: block;
+	text-shadow: 1px 1px 50px rgb(255, 255, 255);
+}
+.butt a{
+   color: #1a1a1a;
+   font-size: 23px;
+   font-weight: 800;
+   z-index: 3;
+   transition: 2s;
+   width: 100%;
+   text-align: center;
+   text-decoration: none;
+}
+
+
 
 .accordion {
     margin: 20px 0 20px 0;
@@ -65,7 +160,11 @@ h1 {
     border: 10px solid rgb(240, 154, 7);
     border-radius: 10px;
     margin: 20px;
-    width: 50%;
+   margin-left: 60px;
+    width: 60%;
+    
+	
+	
    
 }
 
