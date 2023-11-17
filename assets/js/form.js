@@ -1,5 +1,16 @@
 
 function _init() {
+    var packageType = localStorage.getItem("packageType");
+    if (packageType != "basic" && packageType != "premium") {
+        localStorage.setItem("packageType","basic");
+        var packageType = localStorage.getItem("packageType");
+    }
+    console.log(packageType);
+    if (packageType === "premium") {
+        $("#main-div").attr("class","main-premium-div");
+    } else {
+        $("#main-div").attr("class","main-basic-div");
+    }
 
     var detailsDiv = $('<div>');
     detailsDiv.attr("id","details-div");
@@ -31,7 +42,6 @@ function _init() {
     var emailInp = $('<input type="text">');
     emailInp.attr("id","email-inp");
     
-    
     var emailDiv = $('<div>');
     emailDiv.attr("id","email-div");
     emailDiv.attr("class","input-set");
@@ -39,9 +49,10 @@ function _init() {
     emailDiv.append(emailInp);
     detailsDiv.append(emailDiv);
 
-    var interestsArr = renderQuestions();
-
+    var interestsArr = renderBasicQuestions(packageType);
     buttonsRender(interestsArr);
+
+    setVisibilities();
 }
 
 function buttonsRender(interestsArr) {
@@ -65,16 +76,18 @@ function buttonsRender(interestsArr) {
     btnDiv.append(resetBtn);
     btnDiv.append(submitBtn);
     $("#form-div").append(btnDiv);
-
 }
 
 function formReset(interestsArr) {
+    localStorage.setItem("packageType","basic");
+    $("#main-div").attr("class","main-basic-div");
     $("#name-inp").val("");
     $("#email-inp").val("");
     for (var i=0; i<interestsArr.length; i++) {
         var id = "#input-" + i;
         $(id).prop('checked', false);
     }
+    setVisibilities();
 }
 
 function formSubmit(interestsArr) {
@@ -95,61 +108,86 @@ function formSubmit(interestsArr) {
     storageSet(storageObj);
 }
 
+function getAmountBasicQuestions(interestsArr) {
+    var basicAmt = 0;
+    for (var i = 0; i<interestsArr.length; i++) {
+        if (interestsArr[i]["type"] === "basic") {
+            basicAmt++;
+        }
+    }
+    return basicAmt;
+}
+
 function getInterestsObjArr() {
     return [{
-        lbl:"Gambling?",
-        type:"check",
-        default:"off"
+        lbl:"Concerts?",
+        type:"basic",
     },{
-        lbl:"Nightclubs?",
-        type:"check",
-        default:"off"
-    },{
-        lbl:"Concerts / Shows?",
-        type:"check",
-        default:"off"
-    },{
-        lbl:"Shopping?",
-        type:"check",
-        default:"off"
-    },{
-        lbl:"Out of Town Excursions?",
-        type:"check",
-        default:"off"
+        lbl:"Shows?",
+        type:"basic",
     },{
         lbl:"Sporting Events?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
         lbl:"Motor Sports?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
-        lbl:"Water Sports?",
-        type:"check",
-        default:"off"
+        lbl:"Flights?",
+        type:"basic",
     },{
         lbl:"Hotels?",
-        type:"check",
-        default:"off"
+        type:"basic",
     },{
         lbl:"Restaurants?",
-        type:"check",
-        default:"off"
+        type:"basic",
+    },{
+        lbl:"Helicopter Tours?",
+        type:"premium",
+    },{
+        lbl:"High Stakes Gambling?",
+        type:"premium",
+    },{
+        lbl:"Backstage Passes?",
+        type:"premium",
     }]
 };
 
+function makeUpgradeBtn(questionsDiv) {
+    var upgradeBtn = $("<button>");
+    upgradeBtn.attr("id","upgrade-btn");
+    upgradeBtn.text("PREMIUM OPTIONS!");
+    questionsDiv.append(upgradeBtn);    
+    upgradeBtn.on("click",function() {
+        upgradeOptions();
+    })
+}
 
-function renderQuestions() {
+function renderBasicQuestions(packageType) {
+    var questionsDiv = $("<div>");
+    questionsDiv.attr("id","questions-div");
+    $("#form-div").append(questionsDiv);
+
     var questionsOneDiv = $('<div>');
     questionsOneDiv.attr("id","questions-one-div");
-    $("#form-div").append(questionsOneDiv);
+    questionsOneDiv.attr("class","questions-group");
+    questionsDiv.append(questionsOneDiv);
 
     var questionsTwoDiv = $('<div>');
     questionsTwoDiv.attr("id","questions-two-div");
-    $("#form-div").append(questionsTwoDiv);
+    questionsTwoDiv.attr("class","questions-group");
+    questionsDiv.append(questionsTwoDiv);
+
+    var premiumDiv = $('<div>');
+    premiumDiv.attr("id","premium-div");
+    premiumDiv.attr("class","questions-group");
+    questionsDiv.append(premiumDiv);
+
+    if (packageType === "basic") {
+        makeUpgradeBtn(questionsDiv);
+    }
 
     var interestsArr = getInterestsObjArr();
+    var basicAmt = getAmountBasicQuestions(interestsArr);
     for (var i=0; i<interestsArr.length;i++) {
         var lbl = $("<h4>");
         var id = "quest-" + i;
@@ -167,13 +205,29 @@ function renderQuestions() {
         questDiv.append(chk);
         questDiv.append(lbl);
 
-        if (i < Math.round(interestsArr.length / 2)) {
-            questionsOneDiv.append(questDiv);
+        if (interestsArr[i]["type"] === "basic") {
+            if (i < Math.round(basicAmt / 2)) {
+                questionsOneDiv.append(questDiv);
+            } else {
+                questionsTwoDiv.append(questDiv);
+            }
         } else {
-            questionsTwoDiv.append(questDiv);
+                premiumDiv.append(questDiv);
         }
     }
     return interestsArr;
+}
+
+function setVisibilities() {
+    var packageType = localStorage.getItem("packageType");
+    console.log(packageType);
+    if (packageType === "basic") {
+        $("#premium-div").attr("class","questions-group hid");
+        $("#upgrade-btn").attr("class","vis");
+    } else {
+        $("#upgrade-btn").attr("class","hid");
+        $("#premium-div").attr("class","questions-group");
+    }
 }
 
 function storageGet() {
@@ -185,6 +239,12 @@ function storageGet() {
 function storageSet(storageObj) {
     var storageObjString = JSON.stringify(storageObj);
     localStorage.setItem("storageObj",storageObjString);
+}
+
+function upgradeOptions() {
+    localStorage.setItem("packageType","premium");
+    $("#main-div").attr("class","main-premium-div");
+    setVisibilities();
 }
 
 _init();

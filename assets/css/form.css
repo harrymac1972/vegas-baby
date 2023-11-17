@@ -1,24 +1,53 @@
+:root {
+    --blue-2: #1C6EA4;
+    --neon-pink-2: #ff5cfa;
+    --neon-pink-3: #ff00f7;
+}
+
 input {
     float: left;
     padding: 0.125rem;
     margin: 0.25rem;
 }
 
-#details-div {
-    display: block;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 5px;
-    padding: 5px;
-    text-size-adjust: auto;
-    color: gold;
-    
+
+.lbl {
+    margin-right: 0;
 }
 
-#name-div, #email-div {
-    width: 100%;
+.main-basic-div {
+    background-image: url('../imgs/night-vegas.png');
+}
+.main-premium-div {
+    background-image: url('../imgs/shutterstock_1870427674.jpg');
+}
+
+.quest-set {
+    display: block;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--blue-2);
+    margin: 10px auto 0;
+    color: var(--neon-pink-2);
+    padding: 5px;
+    border: solid white;
+    box-shadow: 2px 2px 2px 2px #090101;
+    border-radius: .5em;
+    text-align: left;
+    width: 400px;  
+}
+
+.questions-group {
+    margin: 0 .5rem;
+}
+
+.quest-input {
+    margin: .5em;
+    margin-right: .75em;
+    width: 1.25em;
+    height: 1em;
+
 }
 
 #btn-div {
@@ -31,50 +60,78 @@ input {
     flex-direction: column;
 }
 
-#reset-btn, #submit-btn{
-    width: 150px;
-    margin: 10px;
-    border: solid 5px white;
-    border-radius: 10px;
-}
-
-#reset-btn {
-    background-color: orange;
-}
-
-#submit-btn {
-    background-color: green;
-}
-
-.lbl {
-    margin-right: 0}
-
-.quest-set {
+#details-div {
     display: block;
-    flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #1C6EA4;
-    box-shadow: 3px 3px 3px 3px #090101;
-    margin: 10px auto 0;
-    color: gold;
-    padding: 5px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1em 0;
+    padding: 1em;
+    text-size-adjust: auto;
+    color: var(--neon-pink-2);
+    background-color: var(--blue-2);
+    border-radius: .5em;
     border: solid white;
-    border-radius: 10px;
-    text-align: left;
-    width: 400px;   
+    box-shadow: 2px 2px 2px 2px #090101;
+    
 }
-
-input.quest-input {
-    margin: 06px;
-    width: 20px;
-    height: 20px;
-}
-
 
 #form-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5rem;
+}
+
+#main-div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#name-div,
+#email-div {
+    width: 100%;
+}
+
+#name-input,
+#email-input {
+    border-radius: .5em;
+}
+
+#questions-div {
+    display: flex;
+    flex-direction: row;
+}
+
+#reset-btn, 
+#submit-btn,
+#upgrade-btn {
+    width: 150px;
+    margin: 10px;
+    border: solid white;
+    border-radius: .5em;
+    background-color: var(--blue-2);
+    color: var(--neon-pink-2);
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px #090101;
+}
+
+#upgrade-btn {
+    color: var(--blue-2);
+    background-color: var(--neon-pink-2);
+    margin: 8em;
+    padding: .5em;
+}
+
+.hid {
+    display:none;
 }
