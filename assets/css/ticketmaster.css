@@ -9,9 +9,15 @@ body {
     background-color: #f7f7f700;
 }
 
-h1 {
+h1,h2 {
     text-align: center;
     color: #ff0800; 
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 #eventForm {
@@ -31,7 +37,7 @@ label {
 input[type="text"],
 input[type="number"],
 button {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #777; 
@@ -46,7 +52,7 @@ input[type="number"]:focus {
 
 button {
     background-color: #ff0000; 
-    color: #000;
+    color: white;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -56,8 +62,9 @@ button:hover {
     color: white;
 }
 
-.eventInfoWrapper {
-    width: 25%;
+
+.event-info {
+    text-align: center;
 }
 
 .event-info {

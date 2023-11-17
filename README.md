@@ -1,5 +1,43 @@
 # Las Vegas Trip Organizer
 
+## Description
+
+## Project Presentation
+
+
+[Las Vegas Trip Organizer Presentation.pptx](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/files/13386868/Las.Vegas.Trip.Organizer.Presentation.pptx)
+
+
+## User Story
+
+## The Tools We've Used In This Project
+
+Bootstrap
+Framework
+Google Fonts
+Server Side Api
+
+
+## Project Diagram
+
+![LasVegasDiagram](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/assets/144311394/155f7b06-3944-4b60-8300-953c56caddf3)
+
+
+## Project Screenshots
+
+## Project Links
+
+Deployed
+	https://ozdaldogru.github.io/Las-Vegas-Trip-Organizer/
+
+GitHub repo link:
+	https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer
+
+Github HTTPS link:
+	https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer.git
+
+
+##
 An application to find best trip to Las Vegas
 Just put a commit
 
