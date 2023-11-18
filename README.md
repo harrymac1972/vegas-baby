@@ -1,116 +1,76 @@
-# Las Vegas Trip Organizer
+# Las Vegas Explorer App
 
 ## Description
 
-## Project Presentation
+The Las Vegas Explorer app is a dynamic web application designed to provide users with an immersive experience of Las Vegas. From premium packages to event information and interactive features, this app serves as a gateway to the thrilling world of the city.
 
+## Table of Contents
 
-[Las Vegas Trip Organizer Presentation.pptx](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/files/13386868/Las.Vegas.Trip.Organizer.Presentation.pptx)
+- [Features](#features)
+  - [Background and Styling](#1-background-and-styling)
+  - [Premium Packages](#2-premium-packages)
+  - [Event Information](#3-event-information)
+  - [Interactive Conversations](#4-interactive-conversations)
+  - [Magical Cards](#5-magical-cards)
+  - [Mobile-Friendly](#6-mobile-friendly)
+- [How to Use](#how-to-use)
+- [Dependencies](#dependencies)
+- [File Structure](#file-structure)
+- [Contributors](#contributors)
+- [License](#license)
 
+## Features
 
-## User Story
+### 1. Background and Styling
 
-## The Tools We've Used In This Project
+- The app boasts a visually appealing background with dynamic Las Vegas images, creating an immersive atmosphere.
+- Responsive and flexible styling for an optimal viewing experience.
 
-Bootstrap
-Framework
-Google Fonts
-Server Side Api
+### 2. Premium Packages
 
+- Exclusive Premium Packages offer curated adventures and thrilling activities, providing users with a VIP pass to the extraordinary side of Las Vegas.
 
-## Project Diagram
+### 3. Event Information
 
-![LasVegasDiagram](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/assets/144311394/155f7b06-3944-4b60-8300-953c56caddf3)
+- Serve as an ultimate events guide, offering details about concerts, shows, and other exciting happenings in Las Vegas.
 
+### 4. Interactive Conversations
 
-## Project Screenshots
+- Users can engage in interactive conversations with the app, obtaining insider knowledge and planning their ideal Vegas trip.
 
-## Project Links
+### 5. Magical Cards
 
-Deployed
-	https://ozdaldogru.github.io/Las-Vegas-Trip-Organizer/
+- Virtual cards spin and reveal exciting content, offering surprises and recommendations for users.
 
-GitHub repo link:
-	https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer
+### 6. Mobile-Friendly
 
-Github HTTPS link:
-	https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer.git
+- The app is designed to be mobile-friendly, allowing users to carry the Las Vegas experience in their pocket.
 
+## How to Use
 
-##
-An application to find best trip to Las Vegas
-Just put a commit
+1. Clone the repository to your local machine.
+2. Open the `index.html` file in a web browser to launch the app.
 
-these are the webpages for our images and link to alternate sites:
+## Dependencies
 
-sites and images Project 1
+- Bootstrap v5.3.2
+- jQuery v3.6.4
+- jQuery UI v1.12.1
+- Day.js v1.11.3
 
+## File Structure
 
-Restaurants:
+- `assets/`: Contains images, styles, and JavaScript files.
+- `imgs/`: Holds images used in the app.
+- `css/`: Includes CSS files for styling.
+- `js/`: Contains JavaScript files for app functionality.
 
-https://www.fourqueens.com/dining/hugos_cellar/index.php (Premium)
+## Contributors
 
-https://www.vicandanthonys.com/location/las-vegas/ (Basic/Premium)
+- [Your Name]
+- [Contributor 1]
+- [Contributor 2]
 
-www.heartattackgrill.com (basic)
+## License
 
-
-Hotels:
-
-https://www.venetianlasvegas.com/ (Premium)
-
-https://mandalaybay.mgmresorts.com/ (basic/Premium)
-
-https://aria.mgmresorts.com/ (Basic)
-
-
-Casino:
-
-https://www.caesars.com/ (basic)
-
-https://www.goldennugget.com/ (Basic/Premium)
-
-https://bellagio.mgmresorts.com/ (Premium)
-
-
-
-
-nightclubs:
-
-https://taogroup.com/venues/hakkasan-nightclub-las-vegas/ (premium)
-
-https://www.wynnlasvegas.com/nightlife/xs-nightclub (Basic/Premium)
-
-https://www.wynnsocial.com/?_gl=1%2A1ylqr3l%2A_gcl_au%2AMzYwMTc4MzQ0LjE2OTkzMTY4Mzc. (basic)
-
-
-
-
-
-Tours:
-
-https://sweetours.com/ (basic)
-
-https://www.pinkadventuretours.com/ (Basic/Premium)
-
-https://www.maverickhelicopter.com/las-vegas-nights-tour (Premium)
-
-
-
-Shopping Spots:
-
-https://www.grandcanalshoppes.com/en.html (Premium)
-
-https://miraclemileshopslv.com/(basic)
-
-https://broadacresm.com/ (basic/Premium)
-
-
-Personal Security:
-
-https://surrealnightlife.com/las-vegas/guide/personal-security-service.html (premium)
-
-https://lvepevents.com/entertainment/bodyguards/ (basic)
-
-https://archerwestsc.com/vip-executive-protection/ (basic/Premium)
-
+This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
