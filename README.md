@@ -2,7 +2,7 @@
 
 ## Description
 
-The Las Vegas Explorer app is a dynamic web application designed to provide users with an immersive experience of Las Vegas. From premium packages to event information and interactive features, this app serves as a gateway to the thrilling world of the city.
+The Las Vegas Explorer app is a dynamic web application designed to provide users with an immersive experience of Las Vegas. From premium or basic packages to event information and interactive features, this app serves as a gateway to the thrilling world of the city.
 
 ## Table of Contents
 
@@ -18,6 +18,8 @@ The Las Vegas Explorer app is a dynamic web application designed to provide user
 - [File Structure](#file-structure)
 - [Contributors](#contributors)
 - [License](#license)
+- [References](#references)
+- [Deployment](#deployment)
 
 ## Features
 
@@ -28,7 +30,7 @@ The Las Vegas Explorer app is a dynamic web application designed to provide user
 
 ### 2. Premium Packages
 
-- Exclusive Premium Packages offer curated adventures and thrilling activities, providing users with a VIP pass to the extraordinary side of Las Vegas.
+- Exclusive Premium Packages or inclusive Basic Package offer curated adventures and thrilling activities, providing users with a VIP pass to the extraordinary side of Las Vegas.
 
 ### 3. Event Information
 
@@ -67,9 +69,11 @@ The Las Vegas Explorer app is a dynamic web application designed to provide user
 
 ## Contributors
 
-- [Your Name]
-- [Contributor 1]
-- [Contributor 2]
+- [Ozdal Dogru]
+- [Harry MacMillan]
+- [Stanislav Morozan]
+- [Jamie Guminy]
+- [Julio Guzman]
 
 ## License
 
