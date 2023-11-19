@@ -14,10 +14,6 @@
     border-radius: 3px;
 }
 
-
-
-  
-
 .header {
     background-color: darkslategray;
     display: flex;
@@ -38,23 +34,16 @@ h1 {
     display: flex;
     justify-content: center;
     font-family:'Lato', sans-serif;
-
 }
 
 
-main {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-}
 
 .left-container {
-    width: 32%;
-    background-color: #787888;
+    background-color: green;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 3px;
-    background-image: linear-gradient(to left, rgb(88, 121, 128) , #787888);
+    background-color: darkslategray;
 }
 
 .left-container .butt {
@@ -113,8 +102,9 @@ main {
 }
 
 .left-container .butt a:hover {
+    font-size: 35px;
     color: #bcff02c2;
-    transition: 4s;
+    transition: 1s;
     text-shadow: 1px 1px 50px 9EB3C2;
     
 }
@@ -140,19 +130,15 @@ main {
 }
 
 .right-container {
-    width: 65%;
-    background-color: #787888;
+    background-color: darkslategrey;
+    color: goldenrod;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 3px;
     text-align: left;
-    font-size: 25px;
-    font-weight: 700;
-    background-image: linear-gradient(to right, rgb(88, 121, 128) , #787888);
+    font-size: 26px;
     
 }
-
-
 
 .accordion {
     margin: 20px 0 20px 0;
@@ -180,15 +166,16 @@ main {
 .redirectionBTN {
     width: 100%;
     background-color: rgb(91, 20, 223);
+    color: goldenrod;
     border: solid 1px green;
+    font-size: large;
 
 }
 
 #carouselExampleRide {
     border: 5px solid rgb(30, 19, 46);
     border-radius:6px;
-    margin: 20px;
-   margin-left: 60px;
+    margin: 5px;
     width: 60%;
     z-index: 1;
 
@@ -196,7 +183,6 @@ main {
 }
 
 .carousel-item {
-
     height: 640px;
     z-index: 1;
 }
@@ -208,11 +194,11 @@ main {
 }
 
 footer {
-    margin-top: 10px;
     background-color: darkslategray;
     color: goldenrod;
 }
 .footer {
+    margin: 5px;
     border: border-box;
     display: block;
     justify-content: space-evenly;
@@ -239,4 +225,5 @@ footer {
       background-color: rgb(248, 248, 236);
     }
   }
+
 
