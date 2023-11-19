@@ -160,7 +160,7 @@ function makeUpgradeBtn(questionsDiv) {
     questionsDiv.append(upgradeBtn);    
     upgradeBtn.on("click",function() {
         upgradeOptions();
-    })
+    });
 }
 
 function renderBasicQuestions(packageType) {
@@ -238,7 +238,6 @@ function storageGet() {
 }
 
 function storageSet(storageObj) {
-    debugger;
     var storageObjString = JSON.stringify(storageObj);
     localStorage.setItem("storageObj",storageObjString);
 }
@@ -247,6 +246,9 @@ function upgradeOptions() {
     localStorage.setItem("packageType","premium");
     $("#main-div").attr("class","main-premium-div");
     setVisibilities();
+    $("#submit-btn").on('click', () => {
+        window.location.replace("./premium.html");
+    });
 }
 
 _init();
