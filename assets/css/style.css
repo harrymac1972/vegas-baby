@@ -7,7 +7,11 @@
     display: flex;
     justify-content: center;
     align-items:center ;
-    background: rgb(54, 68, 122);
+    background: rgb(106, 111, 134);
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
 }
 
 
@@ -36,106 +40,112 @@ h1 {
 
 }
 
-.butt {
-	position: absolute;
-	top: 15%;
-    left: 7%;
-	height: 80px;
-	width: 260px;
-	border-radius: 8px;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	display: flex;
-	overflow: hidden;
-	
-}
-.butt:nth-child(2) {
-    top: 33%;
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
 
-.butt:nth-child(3) {
-    top: 52%;
+.left-container {
+    width: 32%;
+    background-color: #787888;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-image: linear-gradient(to left, rgb(88, 121, 128) , #787888);
 }
 
-.butt:nth-child(4) {
-    top: 71%;
+.left-container .butt {
+    position: relative;
+    height: 80px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 10px;
+   
 }
 
-.butt::before{
-	position: absolute;
-	content: "";
-	height: 77px;
-	width: 270px;
-    background: linear-gradient(60deg, #f409f3, #05ddf2);
-	animation: anos 5s  linear infinite;
+.left-container .butt::before {
+    content: "";
+    position: absolute;
+    height: 77px;
+    width: 80%;
+    background: conic-gradient(60deg, #f409f3, #03f855);
+    border-radius: 3px;
+    animation: anos 3s linear infinite;
+    overflow: hidden;
 }
 
-.butt:nth-child(1)::before {
-
-    animation: anos 7s linear infinite;
-	background: linear-gradient(60deg,#8a09f4,#08ffad);
+.left-container .butt:nth-child(1)::before {
+    animation: anos 3s linear infinite;
+    background: linear-gradient(60deg, #8a09f4, #08ffad);
 }
 
-.butt:nth-child(2)::before {
-	
-    animation: anos 5s linear infinite 1s; 
-	background: linear-gradient(60deg,#f4093c,#05bbf2);/* Delay the animation by 1 second */
+.left-container .butt:nth-child(2)::before {
+    animation: anos 3s linear infinite 1s;
+    background: linear-gradient(60deg, #f4093c, #05bbf2);
 }
 
-.butt:nth-child(3)::before {
-    animation: anos 5s linear infinite 2s;
-	background: linear-gradient(60deg,#40f409,#daf205); /* Delay the animation by 2 seconds */
+.left-container .butt:nth-child(3)::before {
+    animation: anos 3s linear infinite 2s;
+    background: linear-gradient(60deg, #40f409, #daf205);
 }
 
-.butt:nth-child(4)::before {
-    animation: anos 5s linear infinite 3s;
-	background: linear-gradient(60deg,#f40909,#7f05f2); /* Delay the animation by 3 seconds */
-}
-.butt::after{
-	position: absolute;
-	content: "";
-	height: 76px;
-	width: 256px;
-	background: rgb(37, 37, 65);
-	border-radius: 10px;
+.left-container .butt:nth-child(4)::before {
+    animation: anos 4s linear infinite 3s;
+    background: linear-gradient(60deg, #f40909, #7f05f2);
 }
 
+.left-container .butt::after {
+    content: "";
+    position: absolute;
+    height: 76px;
+    width: 79.5%;
+    background: rgb(86, 86, 110);
+    border-radius: 5px;
+    overflow: hidden;
+}
 
-@keyframes anos{
-	0%
-	{
-		transform: rotate(0deg);
-	}
-	100%
-	{
-		transform: rotate(350deg);
-	}
+.left-container .butt a:hover {
+    color: #bcff02c2;
+    transition: 4s;
+    text-shadow: 1px 1px 50px 9EB3C2;
+}
+
+.left-container .butt a {
+    color: #3f3d4d;
+    font-size: 20px;
+    font-weight: 800;
+    z-index: 3;
+    transition: 2s;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+@keyframes anos {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.right-container {
+    width: 65%;
+    background-color: #787888;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    text-align: left;
+    font-size: 26px;
+    background-image: linear-gradient(to right, rgb(88, 121, 128) , #787888);
     
 }
-.butt a:hover{
-	color: #b3f205c2;
-	transition: 2s;
-	display: block;
-	text-shadow: 1px 1px 50px rgb(255, 255, 255);
-}
-
-
-
-
-
-.butt a{
-   color: #1a1a1a;
-   font-size: 23px;
-   font-weight: 800;
-   z-index: 3;
-   transition: 2s;
-   width: 100%;
-   text-align: center;
-   text-decoration: none;
-}
-
-
 
 .accordion {
     margin: 20px 0 20px 0;
@@ -173,11 +183,8 @@ h1 {
     margin: 20px;
    margin-left: 60px;
     width: 60%;
-    left: 7%;
-    
-	
-	
-   
+
+       
 }
 
 .carousel-item {
