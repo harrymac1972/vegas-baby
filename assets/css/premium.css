@@ -1,4 +1,4 @@
-
+/* Body styling */
 body {
   display: flex;
   flex-wrap: wrap;
@@ -7,72 +7,299 @@ body {
   align-items: center;
   padding-top: 50px;
   background-image: url("../imgs/background.jpg");
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Segoe UI', sans-serif;
-  min-height: 100vh;
-  margin: -25px;
 }
-.card-container {
+
+/* Main title styling */
+h1 {
   position: absolute;
-  perspective: 1000px;
-  margin-bottom: 100px;
-
-
+  top: 75%;
+  left: 28%;
+  font-size: 75px;
+  font-family: Verdana;
+  letter-spacing: 10px;
+  background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff00c4, #ff0000);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animateText 10s linear infinite;
 }
 
-.card {
-  width: 200px;
-  height: 300px;
-  margin: 0 20px;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
+/* Text animation */
+@keyframes animateText {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+/* Subtitle styling */
+h3 {
+  position: absolute;
+  top: 75%;
+  left: 13%;
+  font-size: 18px;
+  font-family: Verdana;
+  color: #00eeff;
+  text-shadow: 2px 2px 2px black, 0 0 25px blue, 0 0 5px rgb(5, 5, 95);
+}
+
+/* Arrow styling */
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%) rotate(90deg);
   cursor: pointer;
-  
-  
 }
 
+.arrow span {
+  display: block;
+  width: 1.7vw;
+  height: 1.7vw;
+  border-bottom: 8px solid rgb(106, 81, 196);
+  border-right: 8px solid rgb(80, 63, 138);
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animateArrow 2s infinite;
+  border-radius: 3px;
+}
 
-.card :hover {
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+/* Arrow animation */
+@keyframes animateArrow {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+/* Card styling */
+.card {
+  width: 240px;
+  height: 325px;
+  border-radius: 18px;
+}
+
+/* Card back styling */
+.card-back {
+  margin-top: 100px;
+  background: #8d72c2;
+  display: grid;
+  grid-template-columns: 240px;
+  grid-template-rows: 130px 130px 80px;
+  grid-template-areas: "image" "text" "bottom";
+  font-family: 'roboto';
+  border-radius: 18px;
+  box-shadow: -1rem 0 3rem #000;
+  text-align: center;
+  overflow: hidden;
+  transition: all 1s ease;
   transform: rotateY(180deg);
-}
-
-.card .card-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   backface-visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
+  transform-style: preserve-3d;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.card .front {
-  background-color: #3498db;
+/* Front of the card styling */
+.thefront {
+  margin-top: 100px;
+  position: absolute;
+  width: 240px;
+  height: 325px;
+  border-radius: 18px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background-image: url("assets/spade.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  border-style: solid;
+  border-width: 1px;
+  transform: rotateY(0deg);
+  transition: all 1s ease;
+  transform-style: preserve-3d;
 }
 
-.card .back {
-  background-color: #2ecc71;
+/* Card hover animation */
+.card:hover .thefront {
   transform: rotateY(180deg);
+  box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(126, 17, 39);
 }
 
-
-
-img {
-  min-width: 200px;
-  max-width: 200px;
-  min-height: 200px;
-  max-height: 200px;
-}
-.container {
-  margin-top: 30%;
-  display: flex;
-  justify-content: center;
+.card:hover .card-back {
+  transform: rotateY(0deg);
 }
 
- 
+/* Button styling */
+.btn {
+  background: #54c3dd;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Button hover styling */
+.btn:hover {
+  background: #5b51e1;
+  text-decoration: none;
+}
+
+/* Card image styling */
+.card-img {
+  grid-area: "image";
+  background: linear-gradient(#fff0 0%, #fff0, 70%, #dfd6d6 100%);
+  background-size: cover;
+  border-radius: 0 0 60% 60% / 0 0 20% 20%;
+  box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(173, 49, 74);
+}
+
+/* Card description styling */
+.card-description {
+  grid-area: text;
+  font-family: 'Segoe UI';
+  margin-top: -8px;
+}
+
+.card-description > p {
+  margin: 12px;
+  margin-top: -8px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.card-description-text::-webkit-scrollbar {
+  display: none;
+}
+.card-description-text{
+  display: block;
+  overflow-y: scroll;
+  height: 90px;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
+/* Navigation links styling */
+.nav-links a {
+  text-decoration: none;
+  color: rgb(45, 0, 128);
+  font-size: 20px;
+  padding: 2px;
+  font-family: 'Segoe UI';
+}
+
+/* General link styling */
+a {
+  font-family: 'Segoe UI', sans-serif;
+  text-decoration: none;
+  color: rgb(54, 8, 97);
+}
+
+/* Link hover styling */
+a:hover {
+  text-decoration: none;
+  color: rgb(240, 223, 74)
+}
+
+/* Special styling for specific section */
+#visit {
+  font-family: 'Segoe UI';
+  text-transform: uppercase;
+}
+
+/* Button styling */
+#booknowbtn {
+  background: #54c3dd;
+  background: linear-gradient(#ecf2cb, #cfb997);
+  grid-area: bottom;
+  border: none;
+  font-size: 20px;
+  color: white;
+  margin-top: 35px;
+  text-decoration: none;
+  box-shadow: inset 0px 0px 8px rgb(200, 237, 100), 0 0 15px rgb(173, 49, 74);
+}
+
+/* Button hover styling */
+#booknowbtn:hover {
+  cursor: pointer;
+  background: #51a7e1;
+}
+
+/* Card hover animation */
+.card:hover {
+  transform: translateY(-1rem);
+}
+
+/* Card transition animation */
+.card:hover ~ .card {
+  transform: translateX(130px);
+}
+
+/* Spacing for cards */
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+/* Image styling for specific cards */
+#ten {
+  background-image: url("../imgs/10-S.png");
+}
+
+#jack {
+  background-image: url("../imgs/J-S.png");
+}
+
+#queen {
+  background-image: url("../imgs/Q-S.png");
+}
+
+#king {
+  background-image: url("../imgs/K-S.png");
+}
+
+#ace {
+  background-image: url("../imgs/A-S.png");
+}
+
+#nightclub {
+  background-image: url("https://taogroup.com/wp-content/uploads/2022/06/Hakkasan_LilJon_7.2.21_ChelsaChristensen_HighRes-129-scaled.jpg");
+}
+
+#capo {
+  background-image: url("https://media.cntraveler.com/photos/5a8453e5833f8a477b949503/16:9/w_2560,c_limit/Capo's_Tony-Gemignani_2018_Capo's-exterior-time-period.jpg");
+}
+
+#helitour {
+  background-image: url("https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/f0/69/28.jpg");
+}
+
+#hotel {
+  background-image: url("https://images.getaroom-cdn.com/image/upload/s--gCsvwa3C--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1688588192/cd699a9f3ee9ff2a372b7ade85e653b04f0c3000?atc=e7cd1cfa");
+}
+
+#casino {
+  background-image: url("https://i.pinimg.com/564x/4a/bd/3d/4abd3d00f943aa7b888e122f543d39e4.jpg");
+}

@@ -1,116 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>asVegasPremiumPackage</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/css/premium.css" />
-  </head>
-  <body>
-    <div class="card-container">
-      <div class="card">
-        <div class="card-face front">
-          <img src="front-image1.jpg" alt="Front Image 1">
-        </div>
-        <div class="card-face back">
-          <p>Back Content 1</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="stylesheet" href="assets/css/premium.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Premium</title>
+</head>
+
+<body>
+
+  <!-- Card 1 -->
+  <div class="card">
+    <div class="thefront" id="ten"></div>
+    <div class="card-back">
+      <div class="card-img" id="nightclub"></div>
+      <div class="card-description">
+        <h2 id="visit-header"><a href="https://taogroup.com/venues/hakkasan-nightclub-las-vegas/">Visit Hakasan Nightclub</a></h2>
+        <p class="card-description-text">Hakkasan Nightclub in Las Vegas, located at the MGM Grand Hotel & Casino, is a world-renowned nightlife destination famous for hosting top-tier DJs and performers. With its opulent design, cutting-edge sound systems, and energetic atmosphere, Hakkasan offers a premier nightlife experience in the heart of the Las Vegas entertainment scene.</p>
+      </div>
+      <button id="booknowbtn"><a href="https://taogroup.com/venues/hakkasan-nightclub-las-vegas/">More Options</a></button>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <div class="thefront" id="jack"></div>
+    <div class="card-back">
+      <div class="card-img" id="capo"></div>
+      <div class="card-description">
+        <h2 id="visit-header"><a href="https://www.caposrestaurant.com/about.html">Try out Capos Las Vegas</a></h2>
+        <p class="card-description-text">Capo's Italian Steakhouse & Speakeasy is a luxurious mob-style restaurant that has a speakeasy theme, live nightly entertainment, and incredible food will truly offer an evening that you won't find anywhere else in Las Vegas.</p>
+      </div>
+      <button id="booknowbtn"><a href="https://www.caposrestaurant.com/about.html">More Options</a></button>
+    </div>
+  </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="thefront" id="queen"></div>
+        <div class="card-back">
+          <div class="card-img" id="helitour"></div>
+          <div class="card-description">
+            <h2 id="visit-header"><a href="https://www.papillon.com/las-vegas-tours/helicopter-air-tours/strip-highlights-no-transfers?ref=capturetheatlas">Take a Helicopter</a></h2>
+            <p class="card-description-text">See the bright lights of the Las Vegas Strip on this whirlwind helicopter flight. Soar over this famous stretch of Las Vegas Boulevard for a bird's-eye view of Sin City’s downtown skyline and beyond, including the Bellagio, the Mirage, and the Fremont Street Experience.</p>
+          </div>
+          <button id="booknowbtn"><a href="https://www.papillon.com/las-vegas-tours/helicopter-air-tours/strip-highlights-no-transfers?ref=capturetheatlas">More Options</a></button>
         </div>
       </div>
-    </div>
-
-    <div class="card-container">
-      <div class="card">
-        <div class="card-face front">
-          <img src="front-image1.jpg" alt="Front Image 1">
-        </div>
-        <div class="card-face back">
-          <p>Back Content 1</p>
-        </div>
-      </div>
-    </div>
-
     
-    <div class="card-container">
+      <!-- Card 4 -->
       <div class="card">
-        <div class="card-face front">
-          <img src="front-image1.jpg" alt="Front Image 1">
-        </div>
-        <div class="card-face back">
-          <p>Back Content 1</p>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-    <div class="container">
-      <div
-        id="carouselExampleAutoplaying"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="2000">
-            <img
-              src="./assets/imgs/casinos/bellagio chips.jpg"
-              class="d-block w-100"
-              alt=""
-            />
+        <div class="thefront" id="king"></div>
+        <div class="card-back">
+          <div class="card-img" id="hotel"></div>
+          <div class="card-description">
+            <h2 id="visit-header"><a href="https://www.guestreservations.com/paris-vegas/booking?msclkid=6c01ea3214c01935e9b08f79e02605b2">Stay at Paris Las Vegas</a></h2>
+            <p class="card-description-text">Paris Las Vegas is known for its stunning half-scale replica of the Eiffel Tower, which offers breathtaking views of the Las Vegas Strip. The resort also features a replica of the Montgolfier Balloon, the world's largest helium balloon, which takes guests on a ride with panoramic views of the city.</p>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              src="./assets/imgs/nightclubs/hakkasan.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              src="./assets/imgs/tours/Sweetours 1.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              src="./assets/imgs/restaurants/Heart ATTACK GIRLS.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              src="./assets/imgs/nightclubs/xs pool 3.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="./assets/imgs/9-H.png" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              src="./assets/imgs/vegas-exotic-limo.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
+          <button id="booknowbtn"><a href="https://www.guestreservations.com/paris-vegas/booking?msclkid=6c01ea3214c01935e9b08f79e02605b2">More Options</a></button>
         </div>
       </div>
-    </div>
+    
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="thefront" id="ace"></div>
+        <div class="card-back">
+          <div class="card-img" id="casino"></div>
+          <div class="card-description">
+            <h2 id="visit-header"><a href="https://www.wynnlasvegas.com/">Get Lucky at Wynn</a></h2>
+            <p class="card-description-text">Wynn Las Vegas is a luxury resort and casino located on the Las Vegas Strip, known for its opulent design, world-class dining, and entertainment options. It features an 18-hole golf course, an artificial mountain with a 45-foot waterfall, and a beautiful atrium filled with thousands of hand-picked flowers.</p>
+          </div>
+          <button id="booknowbtn"><a href="https://www.wynnlasvegas.com/">More Options</a></button>
+        </div>
+      </div>
+<!-- Card 6  -->
+      <div class="card">
+        <div class="thefront" id="ace"></div>
+        <div class="card-back">
+          <div class="card-img" id="casino"></div>
+          <div class="card-description">
+            <h2 id="visit-header"><a href="https://www.wynnlasvegas.com/">Get Lucky at Wynn</a></h2>
+            <p class="card-description-text">Wynn Las Vegas is a luxury resort and casino located on the Las Vegas Strip, known for its opulent design, world-class dining, and entertainment options. It features an 18-hole golf course, an artificial mountain with a 45-foot waterfall, and a beautiful atrium filled with thousands of hand-picked flowers.</p>
+          </div>
+          <button id="booknowbtn"><a href="https://www.wynnlasvegas.com/">More Options</a></button>
+        </div>
+      </div>
+    
+<!-- Card 7 -->
+      <div class="card">
+        <div class="thefront" id="ace"></div>
+        <div class="card-back">
+          <div class="card-img" id="casino"></div>
+          <div class="card-description">
+            <h2 id="visit-header"><a href="https://www.wynnlasvegas.com/">Get Lucky at Wynn</a></h2>
+            <p class="card-description-text">Wynn Las Vegas is a luxury resort and casino located on the Las Vegas Strip, known for its opulent design, world-class dining, and entertainment options. It features an 18-hole golf course, an artificial mountain with a 45-foot waterfall, and a beautiful atrium filled with thousands of hand-picked flowers.</p>
+          </div>
+          <button id="booknowbtn"><a href="https://www.wynnlasvegas.com/">More Options</a></button>
+        </div>
+      </div>
+<!-- Card 8 -->
+      <div class="card">
+        <div class="thefront" id="ace"></div>
+        <div class="card-back">
+          <div class="card-img" id="casino"></div>
+          <div class="card-description">
+            <h2 id="visit-header"><a href="https://www.wynnlasvegas.com/">Get Lucky at Wynn</a></h2>
+            <p class="card-description-text">Wynn Las Vegas is a luxury resort and casino located on the Las Vegas Strip, known for its opulent design, world-class dining, and entertainment options. It features an 18-hole golf course, an artificial mountain with a 45-foot waterfall, and a beautiful atrium filled with thousands of hand-picked flowers.</p>
+          </div>
+          <button id="booknowbtn"><a href="https://www.wynnlasvegas.com/">More Options</a></button>
+        </div>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-    <script src="assets/js/premium.js"></script>
-  </body>
+  <a href="./index.html">
+    <div class="arrow">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </a>
+  <script src="./assets/js/premium.js"></script>
+</body>
+
 </html>
