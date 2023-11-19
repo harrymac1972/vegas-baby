@@ -114,3 +114,16 @@ https://lvepevents.com/entertainment/bodyguards/ (basic)
 
 https://archerwestsc.com/vip-executive-protection/ (basic/Premium)
 
+
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    background-image: radial-gradient (#588285, #4e4e88 , #787888);
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    
+}
