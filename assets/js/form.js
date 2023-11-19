@@ -67,6 +67,7 @@ function buttonsRender(interestsArr) {
     submitBtn.attr("id","submit-btn");
     submitBtn.text("Submit");
     submitBtn.on("click",function() {
+        //alert("clicked submit")
         formSubmit(interestsArr);
     })
 
@@ -237,6 +238,7 @@ function storageGet() {
 }
 
 function storageSet(storageObj) {
+    debugger;
     var storageObjString = JSON.stringify(storageObj);
     localStorage.setItem("storageObj",storageObjString);
 }
