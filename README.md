@@ -82,4 +82,28 @@ This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE
 ## References
 ............................
 
+
+## Screenshots
+
+## Project Diagram
+
+![LasVegasDiagram](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/assets/144311394/155f7b06-3944-4b60-8300-953c56caddf3)
+
+## Project Presentation
+
+
+[Las Vegas Trip Organizer Presentation.pptx](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/files/13386868/Las.Vegas.Trip.Organizer.Presentation.pptx)
+
+
 ## Deployment
+
+Deployed
+	https://ozdaldogru.github.io/Las-Vegas-Trip-Organizer/
+
+GitHub repo link:
+	https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer
+
+Github HTTPS link:
+	https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer.git
+
+
