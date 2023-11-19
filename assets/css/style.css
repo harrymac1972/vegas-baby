@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .background {
     display: flex;
     justify-content: center;
@@ -14,7 +15,6 @@
     border-radius: 3px;
     
 }
-
 
 
 
@@ -137,6 +137,8 @@ h1 {
     background-color: darkslategrey;
     color: rgb(190, 218, 32);
     padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
     box-sizing: border-box;
     border-radius: 3px;
     text-align: left;
@@ -264,4 +266,9 @@ footer {
     }
   }
 
+@media screen and (min-width: 80rem) {
+  .container {
+    margin: 1em 2em;
+  }
+}
 
