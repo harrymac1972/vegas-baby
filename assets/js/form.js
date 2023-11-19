@@ -198,7 +198,7 @@ function makeUpgradeBtn(questionsDiv) {
     // Add click event listener to the upgrade button
     upgradeBtn.on("click",function() {
         upgradeOptions();
-    })
+    });
 }
 
 // Function to render basic questions based on the package type
@@ -291,10 +291,9 @@ function storageGet() {
 
 // Function to store data in local storage
 function storageSet(storageObj) {
-    // Debugging statement to pause execution and open the debugger
-    debugger;
 
-    // Convert storage object to JSON string and store in local storage
+
+
     var storageObjString = JSON.stringify(storageObj);
     localStorage.setItem("storageObj",storageObjString);
 }
@@ -309,6 +308,9 @@ function upgradeOptions() {
 
     // Adjust visibilities based on the package type
     setVisibilities();
+    $("#submit-btn").on('click', () => {
+        window.location.replace("./premium.html");
+    });
 }
 
 // Initialize the form and related elements
