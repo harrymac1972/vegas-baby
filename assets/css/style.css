@@ -15,6 +15,9 @@
     
 }
 
+
+
+
 .header {
     background-color: darkslategray;
     display: flex;
@@ -139,9 +142,7 @@ h1 {
     text-align: left;
     font-size: 26px;   
 }
-.right-container .p {
-  
-}
+
 
 
 
@@ -178,15 +179,47 @@ h1 {
 }
 
 #carouselExampleRide {
-    border: 5px solid rgb(30, 19, 46);
-    border-radius:6px;
+    
+    border-radius: 6px;
     margin: 5px;
     width: 60%;
     z-index: 1;
+    position: relative; /* Added for positioning pseudo-elements */
 
-       
+    /* Pseudo-elements */
+    &::before,
+    .carouselExampleRide::after {
+        content: "";
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        background: linear-gradient(45deg, yellow, orange, red, pink, purple, orange, green);
+        background-size: 400%;
+        width: calc(100% + 5px);
+        height: calc(100% + 5px);
+        z-index: -1px;
+        animation: animate 20s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            background-position: 0 0;
+        }
+
+        50% {
+            background-position: 400% 0;
+        }
+
+        100% {
+            background-position: 0 0;
+        }
+    }
+
+    /* Pseudo-element for blur effect */
+    &::after {
+        filter: blur(40px);
+    }
 }
-
 .carousel-item {
     height: 640px;
     z-index: 1;
