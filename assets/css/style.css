@@ -48,7 +48,7 @@ h1 {
 
 .left-container .butt {
     position: relative;
-    height: 80px;
+    height:58px;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
@@ -62,21 +62,21 @@ h1 {
 .left-container .butt::before {
     content: "";
     position: absolute;
-    height: 77px;
-    width: 80%;
+    height: 57px;
+    width: 95%;
     background: conic-gradient(60deg, #f409f3, #03f855);
     border-radius: 3px;
-    animation: anos 3s linear infinite;
+    animation: anos 2s linear infinite;
     overflow: hidden;
 }
 
 .left-container .butt:nth-child(1)::before {
-    animation: anos 3s linear infinite;
+    animation: anos 4s linear infinite;
     background: linear-gradient(60deg, #8a09f4, #08ffad);
 }
 
 .left-container .butt:nth-child(2)::before {
-    animation: anos 3s linear infinite 1s;
+    animation: anos 5s linear infinite 1s;
     background: linear-gradient(60deg, #f4093c, #05bbf2);
 }
 
@@ -86,15 +86,15 @@ h1 {
 }
 
 .left-container .butt:nth-child(4)::before {
-    animation: anos 4s linear infinite 3s;
+    animation: anos 6s linear infinite 1s;
     background: linear-gradient(60deg, #f40909, #7f05f2);
 }
 
 .left-container .butt::after {
     content: "";
     position: absolute;
-    height: 76px;
-    width: 79.5%;
+    height: 56px;
+    width: 94.5%;
     background: rgb(86, 86, 110);
     border-radius: 5px;
     overflow: hidden;
@@ -131,14 +131,18 @@ h1 {
 
 .right-container {
     background-color: darkslategrey;
-    color: goldenrod;
+    color: rgb(190, 218, 32);
     padding: 20px;
     box-sizing: border-box;
     border-radius: 3px;
     text-align: left;
-    font-size: 26px;
-    
+    font-size: 26px;   
 }
+.right-container .p {
+  
+}
+
+
 
 .accordion {
     margin: 20px 0 20px 0;
