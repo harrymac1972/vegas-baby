@@ -78,3 +78,8 @@ The Las Vegas Explorer app is a dynamic web application designed to provide user
 ## License
 
 This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
+
+## References
+............................
+
+## Deployment
