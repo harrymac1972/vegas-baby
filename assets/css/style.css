@@ -68,10 +68,7 @@ main {
     margin-bottom: 10px;
    
 }
-.butt:hover {
-    
-    box-shadow: inset 0px 0px 8px yellowgreen, 0 0 15px  cyan;   
-}
+
 
 .left-container .butt::before {
     content: "";
