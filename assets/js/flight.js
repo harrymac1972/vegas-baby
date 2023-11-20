@@ -12,7 +12,7 @@
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'f1af298a23msh5b5e6a9fcf7c85ep1ce139jsndc8bdaa3b362',
+                'X-RapidAPI-Key': '03999fd41cmshd8e276a9d64426cp18c24ajsndb415e912b8f',
                 'X-RapidAPI-Host': 'tripadvisor16.p.rapidapi.com'
             }
         };
