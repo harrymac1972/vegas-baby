@@ -59,6 +59,8 @@ function displayEventInfo(eventData) {
                     <p>Date: ${event.dates.start.localDate}</p>
                     <p>Time: ${event.dates.start.localTime}</p>
                     <p>Venue: ${event._embedded.venues[0].name}</p>
+                    <!-- Highlighted Line -->
+                    <p><a href="${event.url}" target="_blank">Event Details</a></p>
                 </div>
             `;
         });
