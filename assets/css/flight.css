@@ -7,6 +7,18 @@ body {
     background-size: cover;
 }
 
+#search-form {
+    margin-top: 30px;
+   margin-left: 35%;
+    width: 25%;
+}
+
+#result-container {
+
+    margin-top: 30px;
+    margin-left: 35%;
+}
+
 .container {
     max-width: 800px;
     margin: 20px auto;
