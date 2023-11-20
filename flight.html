@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search</title>
+    <link rel="stylesheet" href="flight.css">
+</head>
+
+<body>
+    <div id="search-form">
+        <label for="departureAirport">Departure Airport Code:</label>
+        <input type="text" id="departureAirport" placeholder="Enter departure airport code">
+
+        <label for="arrivalAirport">Arrival Airport Code:</label>
+        <input type="text" id="arrivalAirport" value="LAS" disabled>
+
+        <label for="flightDate">Flight Date:</label>
+        <input type="date" id="flightDate">
+
+        <label for="returnDate">Return Date:</label>
+        <input type="date" id="returnDate">
+
+        <label for="passengerCount">Number of Passengers:</label>
+        <input type="number" id="passengerCount" min="1" value="1">
+
+        <label for="classOfService">Seating Class:</label>
+        <select id="classOfService">
+            <option value="ECONOMY">Economy</option>
+            <option value="ECONOMY_PLUS">Economy Plus</option>
+            <option value="BUSINESS">Business</option>
+        </select>
+
+        <button onclick="searchFlights()">Search Flights</button>
+    </div>
+
+    <div id="result-container">
+    </div>
+
+    <script src="flight.js"></script>
+</body>
+
+</html>
