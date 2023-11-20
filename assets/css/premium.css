@@ -88,8 +88,8 @@ h3 {
   display: block;
   width: 1.7vw;
   height: 1.7vw;
-  border-bottom: 8px solid rgb(106, 81, 196);
-  border-right: 8px solid rgb(80, 63, 138);
+  border-bottom: 8px solid rgb(63, 40, 145);
+  border-right: 8px solid rgb(42, 28, 88);
   transform: rotate(45deg);
   margin: -10px;
   animation: animateArrow 2s infinite;
