@@ -84,6 +84,7 @@ function buttonsRender(interestsArr) {
         // Uncomment the line below to show an alert when the submit button is clicked
         //alert("clicked submit");
         formSubmit(interestsArr);
+        window.location.replace("./premium.html");
     });
 
     // Create btnDiv, append resetBtn and submitBtn, and append it to form-div
@@ -184,7 +185,6 @@ function getInterestsObjArr() {
         type:"premium",
     }]
 };
-
 
 
 // Function to create and handle the upgrade button
@@ -292,8 +292,6 @@ function storageGet() {
 // Function to store data in local storage
 function storageSet(storageObj) {
 
-
-
     var storageObjString = JSON.stringify(storageObj);
     localStorage.setItem("storageObj",storageObjString);
 }
@@ -308,9 +306,6 @@ function upgradeOptions() {
 
     // Adjust visibilities based on the package type
     setVisibilities();
-    $("#submit-btn").on('click', () => {
-        window.location.replace("./premium.html");
-    });
 }
 
 // Initialize the form and related elements
