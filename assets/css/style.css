@@ -108,7 +108,7 @@ h1 {
 .left-container .butt a:hover {
     font-size: 35px;
     color: #bcff02c2;
-    transition: 1s;
+    transition: 0.5s;
     text-shadow: 1px 1px 50px 9EB3C2;
     
 }
