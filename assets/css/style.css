@@ -52,7 +52,7 @@ h1 {
 
 .left-container .butt {
     position: relative;
-    height:58px;
+    height:57px;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
@@ -92,6 +92,11 @@ h1 {
 .left-container .butt:nth-child(4)::before {
     animation: anos 6s linear infinite 1s;
     background: linear-gradient(60deg, #f40909, #7f05f2);
+}
+
+.left-container .butt:nth-child(5)::before {
+    animation: anos 6s linear infinite 1s;
+    background: linear-gradient(60deg, #8a09f4, #08ffad);
 }
 
 .left-container .butt::after {
