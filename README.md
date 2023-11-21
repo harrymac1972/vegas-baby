@@ -5,19 +5,22 @@ The Las Vegas Explorer app is a dynamic web application designed to provide user
 
 ## Table of Contents
 - [Features](#features)
-  - [Background and Styling](#1-background-and-styling)
-  - [Premium Packages](#2-premium-packages)
-  - [Event Information](#3-event-information)
-  - [Interactive Conversations](#4-interactive-conversations)
-  - [Magical Cards](#5-magical-cards)
-  - [Mobile-Friendly](#6-mobile-friendly)
+- [Background and Styling](#1-background-and-styling)
+- [Premium Packages](#2-premium-packages)
+- [Event Information](#3-event-information)
+- [Interactive Conversations](#4-interactive-conversations)
+- [Magical Cards](#5-magical-cards)
+- [Mobile-Friendly](#6-mobile-friendly)
 - [How to Use](#how-to-use)
 - [Dependencies](#dependencies)
 - [File Structure](#file-structure)
 - [Contributors](#contributors)
-- [Technology-Used](#technology used)
+- [Technology Used](#technology-used)
 - [License](#license)
 - [References](#references)
+- [Screenshots](#Screenshots)
+- [Project Diagram](#Project-Diagram)
+- [Project Presentation](#Project-Presentation)
 - [Deployment](#deployment)
 ## Features
 
@@ -90,7 +93,7 @@ https://dev.to/
 ![LasVegasDiagram](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/assets/144311394/155f7b06-3944-4b60-8300-953c56caddf3)
 
 ## Project Presentation
-[Las Vegas Trip Organizer Presentation.pptx](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/files/13386868/Las.Vegas.Trip.Organizer.Presentation.pptx)
+[Las Vegas Trip Organizer Presentation.pptx](/assets/documents/Las%20Vegas%20Trip%20Organizer%20Presentation..pptx)
 
 ## Deployment
 Deployed
