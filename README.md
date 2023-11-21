@@ -79,7 +79,7 @@ https://dev.to/
 
 ## Screenshots
 
-![1](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/assets/144311394/739983c7-20d2-4539-89e9-ff8479cb222a)
+![1](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/assets/144311394/ce81c58f-5071-4f19-959d-a13159450e60)
 ![2](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/assets/144311394/f7f578f2-17ab-45dd-bdfd-62d0755622d9)
 ![3](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/assets/144311394/0d07bd1c-c30b-4754-979a-a0dc46fd9d21)
 ![4](https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer/assets/144311394/a0b5ddcb-d32e-4533-a1e5-188995d62155)

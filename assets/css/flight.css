@@ -7,9 +7,19 @@ body {
     background-size: cover;
 }
 
+#home-btn {
+    border: 3px solid;
+    border-radius: 10px;
+    margin-left: 35%;
+    width: 25%;
+    color: aliceblue;
+    background-color: green;
+    text-align: center;
+
+}
 #search-form {
-    margin-top: 30px;
-   margin-left: 35%;
+    margin-top: 25px;
+    margin-left: 35%;
     width: 25%;
 }
 
