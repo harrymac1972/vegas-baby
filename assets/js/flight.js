@@ -20,7 +20,8 @@
         try {
             const response = await fetch(url, options);
             const result = await response.json(); // Use text() instead of json()
-            console.log(result);
+            let flightsArr = result["data"]["flights"];
+            displayResults(flightsArr);
 
             document.getElementById('result-container').innerHTML = `<pre>${result}</pre>`;
         } catch (error) {
@@ -30,3 +31,13 @@
 
     window.searchFlights = searchFlights;
 })();
+
+function displayResults(flightsArr) {
+    for(var i=0;i<flightsArr.length;i++) {
+        var details = flightsArr[i]["purchaseLinks"]["0"];
+        var provider = details["partnerSuppliedProvider"]["displayName"];
+        var price = details["totalPrice"];
+        console.log(provider);
+        console.log(price);
+    }
+}
