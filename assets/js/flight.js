@@ -23,7 +23,7 @@
             let flightsArr = result["data"]["flights"];
             displayResults(flightsArr);
 
-            document.getElementById('result-container').innerHTML = `<pre>${result}</pre>`;
+            // document.getElementById('result-container').innerHTML = `<pre>${result}</pre>`;
         } catch (error) {
             console.error(error);
         }
@@ -33,11 +33,31 @@
 })();
 
 function displayResults(flightsArr) {
+    var resultCon = $("#result-container");
     for(var i=0;i<flightsArr.length;i++) {
         var details = flightsArr[i]["purchaseLinks"]["0"];
         var provider = details["partnerSuppliedProvider"]["displayName"];
         var price = details["totalPrice"];
-        console.log(provider);
-        console.log(price);
+
+        var flightDiv = $("<div>");
+        flightDiv.attr("id","flight-div");
+        // flightDiv.css("display", "flex"); <-- done in css
+        resultCon.append(flightDiv);
+
+        var providerEL = $("<h5>");
+        var providerID = "provider-" + i;
+        providerEL.attr("id",providerID);
+        providerEL.attr("class","provider");
+        providerEL.text(provider);
+        flightDiv.append(providerEL);
+
+        var priceEl = $("<h5>");
+        var priceID = "price-" + i;
+        priceEl.attr("id",priceID);
+        priceEl.attr("class","price");
+        priceEl.text(price);
+        flightDiv.append(priceEl);
+
+
     }
 }
