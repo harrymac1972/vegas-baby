@@ -7,37 +7,6 @@ body {
     background-size: cover;
 }
 
-#home-btn {
-    border: 3px solid;
-    border-radius: 10px;
-    margin-left: 35%;
-    width: 25%;
-    color: aliceblue;
-    background-color: green;
-    text-align: center;
-
-}
-#search-form {
-    margin-top: 25px;
-    margin-left: 35%;
-    width: 25%;
-}
-
-#result-container {
-
-    margin-top: 30px;
-    margin-left: 35%;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
 form {
     display: flex;
     flex-wrap: wrap;
@@ -73,15 +42,57 @@ button:hover {
     background-color: #45a049;
 }
 
-#result-container {
-    margin-top: 20px;
-}
-
 pre {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
 
-#flight-div {
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.flight-div {
     display: flex;
+    margin: 0 2rem;
+}
+
+.price {
+    margin-left: 2rem;
+}
+
+.result-col {
+    display: flex;
+    flex-direction: column;
+}
+
+#home-btn {
+    border: 3px solid;
+    border-radius: 10px;
+    margin-left: 35%;
+    width: 25%;
+    color: aliceblue;
+    background-color: green;
+    text-align: center;
+
+}
+#search-form {
+    margin-top: 25px;
+    margin-left: 35%;
+    width: 25%;
+}
+
+#result-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    max-width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #8398CE;
 }

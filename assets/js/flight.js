@@ -1,6 +1,6 @@
 (async () => {
     const searchFlights = async () => {
-        const departureAirport = document.getElementById('departureAirport').value;
+        const departureAirport = document.getElementById('departureAirport').value.toUpperCase();
         const arrivalAirport = 'LAS';
         const flightDate = document.getElementById('flightDate').value;
         const returnDate = document.getElementById('returnDate').value;
@@ -23,7 +23,6 @@
             let flightsArr = result["data"]["flights"];
             displayResults(flightsArr);
 
-            // document.getElementById('result-container').innerHTML = `<pre>${result}</pre>`;
         } catch (error) {
             console.error(error);
         }
@@ -33,31 +32,43 @@
 })();
 
 function displayResults(flightsArr) {
-    var resultCon = $("#result-container");
-    for(var i=0;i<flightsArr.length;i++) {
+    for(var i=0; i<flightsArr.length; i++) {
         var details = flightsArr[i]["purchaseLinks"]["0"];
         var provider = details["partnerSuppliedProvider"]["displayName"];
         var price = details["totalPrice"];
 
+        // one div per flight with results in a row
         var flightDiv = $("<div>");
-        flightDiv.attr("id","flight-div");
-        // flightDiv.css("display", "flex"); <-- done in css
-        resultCon.append(flightDiv);
+        flightDiv.attr("class","flight-div");
 
-        var providerEL = $("<h5>");
+        // results in two columns
+        if (i < 5) {
+            $("#result-col-1").append(flightDiv);
+        } else {            
+            $("#result-col-2").append(flightDiv);
+        }
+
+        var providerEL = $("<h4>");
         var providerID = "provider-" + i;
         providerEL.attr("id",providerID);
         providerEL.attr("class","provider");
         providerEL.text(provider);
         flightDiv.append(providerEL);
 
-        var priceEl = $("<h5>");
+        var priceEl = $("<h4>");
         var priceID = "price-" + i;
         priceEl.attr("id",priceID);
         priceEl.attr("class","price");
+        price = formatPrice(price);
         priceEl.text(price);
         flightDiv.append(priceEl);
-
-
     }
+}
+
+function formatPrice(price) {
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'CAD',
+      });      
+      return formatter.format(price);
 }
