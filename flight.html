@@ -10,9 +10,7 @@
 
 <body>
 
-    <a href="index.html"><button id="home-btn"><strong>GO BACK TO HOME</strong></button></a>
-    <div id="search-form">
-        
+    <div id="search-form">        
 
         <label for="departureAirport">Departure Airport Code:</label>
         <input type="text" id="departureAirport" placeholder="Enter departure airport code">
@@ -35,8 +33,10 @@
             <option value="ECONOMY_PLUS">Economy Plus</option>
             <option value="BUSINESS">Business</option>
         </select>
-
-        <button onclick="searchFlights()">Search Flights</button>
+        <div id="buttons-div">
+            <button id="home-btn" onclick="goHome()">HOME</button>
+            <button onclick="searchFlights()">Search Flights</button>
+        </div>
     </div>
 
     <div id="result-container">

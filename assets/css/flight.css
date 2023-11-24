@@ -1,3 +1,9 @@
+:root {
+    --dark-blue2: #070D24;
+    --med-blue2: #013C61;
+}
+
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -25,21 +31,21 @@ input, select {
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: .5em;
     margin-bottom: 15px;
 }
 
 button {
-    background-color: #4caf50;
+    background-color: var(--dark-blue2);
     color: #fff;
     padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
+    border: 1px solid white;
+    border-radius: .5em;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: var(--med-blue2);
 }
 
 pre {
@@ -59,10 +65,11 @@ pre {
 .flight-div {
     display: flex;
     margin: 0 2rem;
+    justify-content: space-between;
 }
 
 .price {
-    margin-left: 2rem;
+    margin-left: 2.5rem;
 }
 
 .result-col {
@@ -70,29 +77,28 @@ pre {
     flex-direction: column;
 }
 
-#home-btn {
-    border: 3px solid;
-    border-radius: 10px;
-    margin-left: 35%;
-    width: 25%;
-    color: aliceblue;
-    background-color: green;
-    text-align: center;
-
+#buttons-div {
+    display: flex;
+    justify-content: space-between;
 }
+
 #search-form {
-    margin-top: 25px;
-    margin-left: 35%;
-    width: 25%;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
 }
 
 #result-container {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 3rem;
     max-width: 50vw;
     margin-left: auto;
     margin-right: auto;
     background-color: #8398CE;
+    border-radius: 1rem;
+    border: #fff solid;
+    color: var(--dark-blue2);
 }
