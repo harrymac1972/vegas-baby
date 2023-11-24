@@ -32,10 +32,12 @@
 })();
 
 function displayResults(flightsArr) {
+    $("#result-container").css("display","flex");
     for(var i=0; i<flightsArr.length; i++) {
         var details = flightsArr[i]["purchaseLinks"]["0"];
         var provider = details["partnerSuppliedProvider"]["displayName"];
         var price = details["totalPrice"];
+        price = convertPrice(price);
 
         // one div per flight with results in a row
         var flightDiv = $("<div>");
@@ -65,10 +67,20 @@ function displayResults(flightsArr) {
     }
 }
 
+function convertPrice(price) {
+    // JSON price is 'INR' (Indian Rupees)
+    var priceCAD = price / 60.856166;
+    return priceCAD;
+}
+
 function formatPrice(price) {
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'CAD',
       });      
       return formatter.format(price);
+}
+
+function goHome() {
+    window.location.replace("index.html");
 }
