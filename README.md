@@ -96,9 +96,12 @@ https://dev.to/
 [Las Vegas Trip Organizer Presentation.pptx](/assets/documents/Las%20Vegas%20Trip%20Organizer%20Presentation..pptx)
 
 ## Deployment
-Deployed
-    https://ozdaldogru.github.io/Las-Vegas-Trip-Organizer/
+
+
+Application - <a href="https://harrymac1972.github.io/vegas-baby/" style="font-weight:bolder;">Vegas Baby!</a>
+    
 GitHub repo link:
-    https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer
+    https://github.com/harrymac1972/vegas-baby
 Github HTTPS link:
-    https://github.com/ozdaldogru/Las-Vegas-Trip-Organizer.git
+    https://git@github.com:harrymac1972/vegas-baby.git
+
